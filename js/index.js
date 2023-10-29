@@ -66,5 +66,6 @@ function agregarAlCarrito (e) {
     console.log(productosCarrito.some(producto => producto.id === idBoton ))
     productosCarrito.push(productoAgregado);
     
-}
-
+    localStorage.setItem('productosDelCarrito', JSON.stringify(productosCarrito));
+    
+} 
