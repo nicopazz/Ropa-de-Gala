@@ -1,0 +1,53 @@
+body {
+    background-color: rgb(66, 80, 190);
+}
+
+
+#seccionCategorias {
+    max-width: 100%;
+    color: white;
+}
+#seccionRopa {
+    max-width: 100%;
+    color: rgb(66, 80, 190);
+    background-color: white;
+    margin-top: 7vh;
+    border-radius: 2%;
+
+}
+
+.contenedorAside {
+    padding: 2rem;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding-right: 0;
+}
+
+.asideBotones {
+    background-color: transparent;
+    border: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: black;
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+    width: 100%;
+}
+.active{
+    background-color: white;
+    width: 100%;
+}
+
+.card {
+    border: 1px solid rgb(66, 80, 190);
+}
+.card-body{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    background-color: rgb(66, 80, 190);
+    border-top-right-radius: 5%;
+    border-top-left-radius: 5%;
+    color: white;
+}
