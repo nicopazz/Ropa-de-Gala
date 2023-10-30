@@ -6,6 +6,7 @@ const botonesCategoria = document.querySelectorAll('.asideBotones');
 let botonesAgregar = document.querySelectorAll('.productoAgregar');
 
 
+
 const insertarCategoria = (productosElegidos) => {
     contenedorCards.innerHTML = '';
     productosElegidos.forEach(producto => {
@@ -23,7 +24,7 @@ const insertarCategoria = (productosElegidos) => {
         contenedorCards.appendChild(div);
     });
     actualizarBotones();
-    console.log(botonesAgregar);
+    
 }
 insertarCategoria(productos);
 
@@ -57,15 +58,34 @@ function actualizarBotones (){
     
 }
 
-const productosCarrito = [];
+const productosCarritoLs = JSON.parse(localStorage.getItem('productosDelCarrito'));
+let productosCarrito;
+
+if (productosCarritoLs) {
+    productosCarrito = productosCarritoLs;
+}else{
+    productosCarrito = [];
+}
 
 function agregarAlCarrito (e) {
     let idBoton = e.currentTarget.id
     const productoAgregado = productos.find(producto => producto.id === idBoton);
+    
+    if(productosCarrito.some(producto => producto.id === idBoton)) {
+        const index = productosCarrito.findIndex(producto => producto.id === idBoton);
+        productosCarrito[index].cantidad++;
 
-    console.log(productosCarrito.some(producto => producto.id === idBoton ))
-    productosCarrito.push(productoAgregado);
+    } else{
+        productoAgregado.cantidad = 1;
+        productosCarrito.push(productoAgregado);
+    }
     
     localStorage.setItem('productosDelCarrito', JSON.stringify(productosCarrito));
-    
+
 } 
+
+
+
+
+//JS DE LA PAGINA DEL CARRITO
+
