@@ -1,15 +1,28 @@
-.contenedorCarritoDivs{
-    background-color: rgb(66, 80, 190);
-    color: black;
-    font-size: 1.2rem;
+
+#contenedorProducto {
     border-radius: 1rem;
+    color: rgb(66, 80, 190);
+    font-size: 1.2rem;
+    
 }
 
 #imgCarrito {
     border-radius: 1rem;
+    
 }
 
-#botonEliminar {
+#productoSeleccionado{
+    border: 1px solid black;
+    padding: 1rem;
+    background-color: rgb(176, 174, 174);
+    border-radius: 1rem;
+}
+
+#volverAlInicio{
+    text-decoration: none;
+}
+
+.botonEliminar {
     background-color: transparent;
     border: 0;
     color: red;
