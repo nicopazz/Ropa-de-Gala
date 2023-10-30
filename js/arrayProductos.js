@@ -131,6 +131,8 @@ const productos = [
         imagen: './img/camisas/camisa 4.jpeg'
     }
 ]
+
+console.log(localStorage.setItem('productos', JSON.stringify(productos)));
 export default productos;
 
 
