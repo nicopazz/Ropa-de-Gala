@@ -78,42 +78,42 @@ document.addEventListener("DOMContentLoaded", function () {
         alert('Sesión cerrada');
     });
 
-    const userList = document.getElementById("user-list");
+    // const userList = document.getElementById("user-list");
 
-    const userButtons = {};
+    // const userButtons = {};
 
-    function deleteUser(username) {
-        const index = users.findIndex(user => user.username === username);
-        if (index !== -1) {
-            users.splice(index, 1);
-            localStorage.setItem("users", JSON.stringify(users));
-            renderUserList();
-        }
-    }
+    // function deleteUser(username) {
+    //     const index = users.findIndex(user => user.username === username);
+    //     if (index !== -1) {
+    //         users.splice(index, 1);
+    //         localStorage.setItem("users", JSON.stringify(users));
+    //         renderUserList();
+    //     }
+    // }
 
-    function renderUserList() {
-        userList.innerHTML = "";
+    // function renderUserList() {
+    //     userList.innerHTML = "";
 
-        users.forEach(user => {
-            const row = document.createElement("tr");
-            const username = user.username;
-            const deleteButton = document.createElement("button");
-            deleteButton.textContent = "Eliminar";
-            deleteButton.addEventListener("click", function () {
-                deleteUser(username);
-            });
-            userButtons[username] = deleteButton;
-            row.innerHTML = `
-                <td>${username}</td>
-                <td>${user.email}</td>
-                <td>${user.password}</td>
-                <td>${user.admin ? "Sí" : "No"}</td>
-                <td></td>
-            `;
-            row.querySelector("td:last-child").appendChild(deleteButton);
-            userList.appendChild(row);
-        });
-    }
+    //     users.forEach(user => {
+    //         const row = document.createElement("tr");
+    //         const username = user.username;
+    //         const deleteButton = document.createElement("button");
+    //         deleteButton.textContent = "Eliminar";
+    //         deleteButton.addEventListener("click", function () {
+    //             deleteUser(username);
+    //         });
+    //         userButtons[username] = deleteButton;
+    //         row.innerHTML = `
+    //             <td>${username}</td>
+    //             <td>${user.email}</td>
+    //             <td>${user.password}</td>
+    //             <td>${user.admin ? "Sí" : "No"}</td>
+    //             <td></td>
+    //         `;
+    //         row.querySelector("td:last-child").appendChild(deleteButton);
+    //         userList.appendChild(row);
+    //     });
+    // }
 
-    renderUserList();
+    // renderUserList();
 });
