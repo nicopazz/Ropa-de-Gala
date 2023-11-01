@@ -4,19 +4,22 @@ const contenedorCarritoDiv = document.getElementById('contenedorCarrito');
 const contenedorProducto = document.getElementById('contenedorProducto')
 const textoCarritoVacio = document.querySelector('.textoCarritoVacio');
 let botonesEliminar = document.querySelectorAll('.botonEliminar')
+let contenedorFuncionesCarrito = document.querySelector('.contenedorFuncionesCarrito');
 
 
 function cargarProductosCarrito() {
     if (productosLs) {
-        // textoCarritoVacio.classList.add('disabled');
+        textoCarritoVacio.classList.add('visually-hidden');
         // contenedorProducto.classList.remove('disabled');
+        contenedorFuncionesCarrito.classList.remove('visually-hidden');
+
     
         productosLs.forEach(producto => {
             const div = document.createElement('div');
             div.classList.add("d-flex","justify-content-between");
             div.id = 'productoSeleccionado'
             div.innerHTML = `
-            <img id="imgCarrito" style="width: 4rem" src="${producto.imagen}" alt="${producto.titulo}">
+            <img id="imgCarrito" style="width: 5rem" src="${producto.imagen}" alt="${producto.titulo}">
             <div class="my-auto">
                 <small class="fw-bold">Título</small>
                 <p>${producto.titulo}</p>
@@ -45,26 +48,31 @@ function cargarProductosCarrito() {
     }
 
     actualizarEliminar();
-
+    
 }
 
-cargarProductosCarrito();
 
 
 function actualizarEliminar (){
     botonesEliminar = document.querySelectorAll('.botonEliminar');
-
     botonesEliminar.forEach(boton => {
         boton.addEventListener('click', eliminarDelCarrito);
     });
     
 }
-
+cargarProductosCarrito();
 
 function eliminarDelCarrito (e){
-    let idBoton = e.curretTarget.id;
-    console.log(idBoton);
+    const idBoton = e.currentTarget.id;
+    // const productoEliminado = productosLs.find(producto => producto.id === idBoton);
+    const index = productosLs.findIndex(producto => producto.id === idBoton);
+    
+    productosLs.splice(index, 1);
+    cargarProductosCarrito();
+    
+    localStorage.setItem()
 }
+
 
 
 
