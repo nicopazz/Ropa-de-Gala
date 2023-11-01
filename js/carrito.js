@@ -6,6 +6,7 @@ const textoCarritoVacio = document.querySelector('.textoCarritoVacio');
 let botonesEliminar = document.querySelectorAll('.botonEliminar')
 let contenedorFuncionesCarrito = document.querySelector('.contenedorFuncionesCarrito');
 
+
 function cargarProductosCarrito() {
     if (productosLs) {
         textoCarritoVacio.classList.add('visually-hidden');
@@ -47,26 +48,31 @@ function cargarProductosCarrito() {
     }
 
     actualizarEliminar();
-
+    
 }
 
-cargarProductosCarrito();
 
 
 function actualizarEliminar (){
     botonesEliminar = document.querySelectorAll('.botonEliminar');
-
     botonesEliminar.forEach(boton => {
         boton.addEventListener('click', eliminarDelCarrito);
     });
     
 }
-
+cargarProductosCarrito();
 
 function eliminarDelCarrito (e){
-    let idBoton = e.curretTarget.id;
-    console.log(idBoton);
+    const idBoton = e.currentTarget.id;
+    // const productoEliminado = productosLs.find(producto => producto.id === idBoton);
+    const index = productosLs.findIndex(producto => producto.id === idBoton);
+    
+    productosLs.splice(index, 1);
+    cargarProductosCarrito();
+    
+    localStorage.setItem()
 }
+
 
 
 
