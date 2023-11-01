@@ -4,12 +4,14 @@ const contenedorCarritoDiv = document.getElementById('contenedorCarrito');
 const contenedorProducto = document.getElementById('contenedorProducto')
 const textoCarritoVacio = document.querySelector('.textoCarritoVacio');
 let botonesEliminar = document.querySelectorAll('.botonEliminar')
-
+let contenedorFuncionesCarrito = document.querySelector('.contenedorFuncionesCarrito');
 
 function cargarProductosCarrito() {
     if (productosLs) {
-        // textoCarritoVacio.classList.add('disabled');
+        textoCarritoVacio.classList.add('visually-hidden');
         // contenedorProducto.classList.remove('disabled');
+        contenedorFuncionesCarrito.classList.remove('visually-hidden');
+
     
         productosLs.forEach(producto => {
             const div = document.createElement('div');
