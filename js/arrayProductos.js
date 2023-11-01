@@ -132,7 +132,8 @@ const productos = [
     }
 ]
 export default productos;
-
+export {productos};
+localStorage.setItem('Productos', JSON.stringify(productos));
 
 
 
