@@ -16,7 +16,7 @@ function cargarProductosCarrito() {
             div.classList.add("d-flex","justify-content-between");
             div.id = 'productoSeleccionado'
             div.innerHTML = `
-            <img id="imgCarrito" style="width: 4rem" src="${producto.imagen}" alt="${producto.titulo}">
+            <img id="imgCarrito" style="width: 5rem" src="${producto.imagen}" alt="${producto.titulo}">
             <div class="my-auto">
                 <small class="fw-bold">Título</small>
                 <p>${producto.titulo}</p>
