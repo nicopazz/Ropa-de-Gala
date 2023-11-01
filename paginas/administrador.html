@@ -11,11 +11,10 @@
     <h1 class="text-center mt-5">Pagina de administrador</h1>
 
   <div class="container mt-5 col-4">
-    <form>
+    <form id="formData">
       <div class="mb-3">
         <label for="nuevoProducto" class="form-label">Nuevo producto</label>
-        <input type="text" class="form-control" id="nuevoProducto" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text"></div>
+        <input type="text" class="form-control" id="nuevoProducto">
       </div>
       <div class="mb-3">
         <label for="categoria" class="form-label">Categoria</label>
@@ -34,7 +33,7 @@
    <table class="table table-dark table-striped-columns">
       <thead>
         <tr>
-          <th scope="col">#</th>
+          
           <th scope="col">Productos</th>
           <th scope="col">Categoria</th>
           <th scope="col">Imagen</th>
@@ -42,16 +41,8 @@
           <th scope="col">Acción</th>
         </tr>
       </thead>
-      <tbody>
-        <tr>
-        
-        </tr>
-        <tr>
-        
-        </tr>
-        <tr>
-        
-        </tr>
+      <tbody id="tableBody">
+       
       
       </tbody>
    </table>
