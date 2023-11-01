@@ -1,3 +1,4 @@
+
 const productosLs = JSON.parse(localStorage.getItem('productosDelCarrito'));
 console.log(productosLs);
 const contenedorCarritoDiv = document.getElementById('contenedorCarrito');
@@ -79,26 +80,3 @@ function eliminarDelCarrito (e){
 
 
 
-
-// `
-// <div>
-//     <img id="imgCarrito" style="width: 4rem" src="" alt="">
-// </div>
-// <div class="my-auto">
-//     <small>${producto.titulo}</small>
-//     <p>aa</p>
-// </div>
-// <div class="my-auto">
-//     <small>cantidad</small>
-//     <p>0</p>
-// </div>
-// <div class="my-auto">
-//     <small>precio</small>
-//     <p>aa</p>
-// </div>
-// <div class="my-auto">
-//     <small>subtotal</small>
-//     <p>0</p>
-// </div>
-// <button id="aa" class="small my-auto"><i id="iconoEliminar" class="bi bi-trash"></i></button>
-// `
