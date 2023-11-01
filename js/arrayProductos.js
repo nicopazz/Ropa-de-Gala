@@ -3,7 +3,7 @@ const productos = [
     {
         titulo: 'saco 1',
         id: '01',
-        precio: '$100',
+        precio: 100,
         categoria: {
             nombre:'trajes',
             id:'sacos'
@@ -14,7 +14,7 @@ const productos = [
     {
         titulo: 'saco 2',
         id: '02',
-        precio: '$100',
+        precio: 100,
         categoria: {
             nombre:'trajes',
             id:'sacos'
@@ -25,7 +25,7 @@ const productos = [
     {
         titulo: 'saco 3',
         id: '03',
-        precio: '$100',
+        precio: 100,
         categoria: {
             nombre:'trajes',
             id:'sacos'
@@ -36,7 +36,7 @@ const productos = [
     {
         titulo: 'saco 4',
         id: '04',
-        precio: '$100',
+        precio: 100,
         categoria: {
             nombre:'trajes',
             id:'sacos'
@@ -48,7 +48,7 @@ const productos = [
     {
         titulo: 'pantalon 1',
         id: '05',
-        precio: '$100',
+        precio: 100,
         categoria: {
             nombre:'trajes',
             id:'pantalones'
@@ -59,7 +59,7 @@ const productos = [
     {
         titulo: 'pantalon 2',
         id: '06',
-        precio: '$100',
+        precio: 100,
         categoria: {
             nombre:'trajes',
             id:'pantalones'
@@ -70,7 +70,7 @@ const productos = [
     {
         titulo: 'pantalon 3',
         id: '07',
-        precio: '$100',
+        precio: 100,
         categoria: {
             nombre:'trajes',
             id:'pantalones'
@@ -81,7 +81,7 @@ const productos = [
     {
         titulo: 'pantalon 4',
         id: '08',
-        precio: '$100',
+        precio: 100,
         categoria: {
             nombre:'trajes',
             id:'pantalones'
@@ -93,7 +93,7 @@ const productos = [
     {
         titulo: 'Camisa 1',
         id: '09',
-        precio: '$100',
+        precio: 100,
         categoria: {
             nombre:'trajes',
             id:'camisas'
@@ -103,7 +103,7 @@ const productos = [
     {
         titulo: 'Camisa 2',
         id: '09',
-        precio: '$100',
+        precio: 100,
         categoria: {
             nombre:'trajes',
             id:'camisas'
@@ -113,7 +113,7 @@ const productos = [
     {
         titulo: 'Camisa 3',
         id: '09',
-        precio: '$100',
+        precio: 100,
         categoria: {
             nombre:'trajes',
             id:'camisas'
@@ -123,7 +123,7 @@ const productos = [
     {
         titulo: 'Camisa 4',
         id: '09',
-        precio: '$100',
+        precio: 100,
         categoria: {
             nombre:'trajes',
             id:'camisas'
@@ -132,8 +132,8 @@ const productos = [
     }
 ]
 export default productos;
+export {productos};
 localStorage.setItem('Productos', JSON.stringify(productos));
-
 
 
 
