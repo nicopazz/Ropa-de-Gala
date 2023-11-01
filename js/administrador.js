@@ -1,13 +1,48 @@
-import { productos } from "./arrayProductos";
+import { productos } from "./arrayProductos.js";
 
+
+productos.forEach(producto => {
+  const productRow = document.createElement('tr');
+  productRow.classList.add('rowTable');
+
+  productRow.innerHTML = `
+
+  <th>${producto.titulo}</th>
+  <td>${producto.categoria.id} </td>
+  <td>${producto.precio} </td>
+  <td><img src = "${producto.imagen}" style= "width:5rem"></td>
+  <td></td>
+  <td></td>
+
+  `
+  
+  document.querySelector('tbody').appendChild(productRow);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
 const productos = JSON.parse(localStorage.getItem('Productos'));
+
 
 const form = document.getElementById('formData')
 const nuevoProducto = document.getElementById('nuevoProducto');
 const categoria = document.getElementById('categoria');
 const imagen = document.getElementById('imagen');
 
-let newProduct = JSON.parse(localStorage.getItem('form')) || [];
+let newProduct = JSON.parse(localStorage.getItem('form'));
 
 form.addEventListener('submit', function(event){
   event.preventDefault();
@@ -62,3 +97,5 @@ function renderTable(){
 }
 
 renderTable();
+
+*/
