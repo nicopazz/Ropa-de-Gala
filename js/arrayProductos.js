@@ -8,7 +8,7 @@ const productos = [
             nombre:'trajes',
             id:'sacos'
         },
-        imagen: './img/sacos/saco 1.jpeg'
+        imagen: '../img/sacos/saco 1.jpeg' 
 
     },
     {
@@ -19,7 +19,7 @@ const productos = [
             nombre:'trajes',
             id:'sacos'
         },
-        imagen: './img/sacos/saco 2.jpeg'
+        imagen: '../img/sacos/saco 2.jpeg'
 
     },
     {
@@ -30,7 +30,7 @@ const productos = [
             nombre:'trajes',
             id:'sacos'
         },
-        imagen: './img/sacos/saco 3.jpeg'
+        imagen: '../img/sacos/saco 3.jpeg'
 
     },
     {
@@ -41,7 +41,7 @@ const productos = [
             nombre:'trajes',
             id:'sacos'
         },
-        imagen: './img/sacos/saco 4.jpeg'
+        imagen: '../img/sacos/saco 4.jpeg'
 
     },
     //PANTALONES
@@ -53,7 +53,7 @@ const productos = [
             nombre:'trajes',
             id:'pantalones'
         },
-        imagen: './img/pantalones/pantalon 1.jpeg'
+        imagen: '../img/pantalones/pantalon 1.jpeg'
 
     },
     {
@@ -64,7 +64,7 @@ const productos = [
             nombre:'trajes',
             id:'pantalones'
         },
-        imagen: './img/pantalones/pantalon 2.jpeg'
+        imagen: '../img/pantalones/pantalon 2.jpeg'
 
     },
     {
@@ -75,7 +75,7 @@ const productos = [
             nombre:'trajes',
             id:'pantalones'
         },
-        imagen: './img/pantalones/pantalon 3.jpeg'
+        imagen: '../img/pantalones/pantalon 3.jpeg'
 
     },
     {
@@ -86,7 +86,7 @@ const productos = [
             nombre:'trajes',
             id:'pantalones'
         },
-        imagen: './img/pantalones/pantalon 4.jpeg'
+        imagen: '../img/pantalones/pantalon 4.jpeg'
 
     },
     //CAMISAS
@@ -98,7 +98,7 @@ const productos = [
             nombre:'trajes',
             id:'camisas'
         },
-        imagen: './img/camisas/camisa 1.jpeg'
+        imagen: '../img/camisas/camisa 1.jpeg'
     },
     {
         titulo: 'Camisa 2',
@@ -108,7 +108,7 @@ const productos = [
             nombre:'trajes',
             id:'camisas'
         },
-        imagen: './img/camisas/camisa 2.jpeg'
+        imagen: '../img/camisas/camisa 2.jpeg'
     },
     {
         titulo: 'Camisa 3',
@@ -118,7 +118,7 @@ const productos = [
             nombre:'trajes',
             id:'camisas'
         },
-        imagen: './img/camisas/camisa 3.jpeg'
+        imagen: '../img/camisas/camisa 3.jpeg'
     },
     {
         titulo: 'Camisa 4',
@@ -128,7 +128,7 @@ const productos = [
             nombre:'trajes',
             id:'camisas'
         },
-        imagen: './img/camisas/camisa 4.jpeg'
+        imagen: '../img/camisas/camisa 4.jpeg'
     }
 ]
 export default productos;
