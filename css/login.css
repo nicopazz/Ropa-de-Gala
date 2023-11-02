@@ -1,0 +1,287 @@
+body {
+    background: rgb(66, 80, 190);
+    background: linear-gradient(90deg, rgba(66, 80, 190, 1) 0%, rgba(66, 80, 190, 1) 50%, rgba(242, 242, 242, 1) 50%, rgba(242, 242, 242, 1) 100%);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    min-width: 70%;
+    height: 85vh;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    background: rgb(242, 242, 242);
+    background: linear-gradient(90deg, rgba(242, 242, 242, 1) 0%, rgba(242, 242, 242, 1) 50%, rgba(66, 80, 190, 1) 50%, rgba(66, 80, 190, 1) 100%);
+}
+
+.login-in-box-first {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.login-in-box-second {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-image {
+    height: 500px;
+}
+
+.input {
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    padding: 1.5em;
+    background-color: #ccc;
+    box-shadow: inset 2px 5px 10px rgba(0, 0, 0, 0.3);
+    transition: 300ms ease-in-out;
+}
+
+.input:focus {
+    background-color: white;
+    transform: scale(1.05);
+    box-shadow: 13px 13px 100px #969696,
+        -13px -13px 100px #ffffff;
+}
+
+.login-title {
+    font-size: 40px;
+
+}
+
+.btn {
+    position: relative;
+    font-size: 17px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 0.5em 2em;
+    display: inline-block;
+    border-radius: 6em;
+    transition: all .2s;
+    border: none;
+    font-family: inherit;
+    font-weight: 500;
+    color: black;
+    background-color: white;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.btn:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+
+.btn::after {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 100px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all .4s;
+}
+
+.btn::after {
+    background-color: #fff;
+}
+
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0;
+}
+
+.line {
+    width: 30%;
+}
+
+.sign-up-goto {
+    opacity: 0.5;
+}
+
+.sign-up-goto-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.signupBtn {
+    width: 160px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+    gap: 9px;
+    color: white;
+    background: rgb(154, 216, 226);
+    background: linear-gradient(90deg, rgba(154, 216, 226, 1) 0%, rgba(66, 80, 190, 1) 100%);
+    position: relative;
+    cursor: pointer;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.212);
+}
+
+.arrow {
+    position: absolute;
+    right: 7.5px;
+    background-color: rgb(255, 255, 255);
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.signupBtn:hover .arrow {
+    animation: slide-in-left 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+@keyframes slide-in-left {
+    0% {
+        transform: translateX(-10px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 1379px) {
+
+    .sign-up-goto {
+        opacity: 1;
+        color: #000;
+        font-weight: 700;
+    }
+
+    .login-in-box-second{
+        display: none;
+    }
+
+    .sign-up-goto-container{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.form-loginsignup {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+}
+
+.logout-btn-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 18px;
+}
+
+.Btn {
+    --black: #000000;
+    --ch-black: #141414;
+    --eer-black: #1b1b1b;
+    --night-rider: #2e2e2e;
+    --white: #ffffff;
+    --af-white: #f3f3f3;
+    --ch-white: #e1e1e1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    width: 45px;
+    height: 45px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition-duration: .3s;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.199);
+    background-color: #4250be;
+  }
+  
+  /* plus sign */
+  .sign {
+    width: 100%;
+    transition-duration: .3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .sign svg {
+    width: 17px;
+  }
+  
+  .sign svg path {
+    fill: var(--af-white);
+  }
+  /* text */
+  .text {
+    position: absolute;
+    right: 0%;
+    width: 0%;
+    opacity: 0;
+    color: var(--af-white);
+    font-size: 1.2em;
+    font-weight: 600;
+    transition-duration: .3s;
+  }
+  /* hover effect on button width */
+  .Btn:hover {
+    width: 125px;
+    border-radius: 5px;
+    transition-duration: .3s;
+  }
+  
+  .Btn:hover .sign {
+    width: 30%;
+    transition-duration: .3s;
+    padding-left: 10px;
+  }
+  /* hover effect button's text */
+  .Btn:hover .text {
+    opacity: 1;
+    width: 70%;
+    transition-duration: .3s;
+    padding-right: 10px;
+  }
+  /* button click effect*/
+  .Btn:active {
+    transform: translate(2px ,2px);
+  }
+
+  .oculto{
+    display: none;
+  }
