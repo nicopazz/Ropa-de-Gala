@@ -8,7 +8,7 @@ const productos = [
             nombre:'trajes',
             id:'sacos'
         },
-        imagen: './img/sacos/saco 1.jpeg'
+        imagen: '../img/sacos/saco 1.jpeg'
 
     },
     {
