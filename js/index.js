@@ -3,9 +3,11 @@ import productos from './arrayProductos.js';
 
 const contenedorCards = document.querySelector('.contenedorCards');
 const botonesCategoria = document.querySelectorAll('.asideBotones');
+let botonesAgregar = document.querySelectorAll('.productoAgregar');
 
 
-const insertar = (productosElegidos) => {
+
+const insertarCategoria = (productosElegidos) => {
     contenedorCards.innerHTML = '';
     productosElegidos.forEach(producto => {
         let div = document.createElement('div');
@@ -16,13 +18,15 @@ const insertar = (productosElegidos) => {
             <div class="card-body">
                 <h5 class="card-title">${producto.titulo}</h5>
                 <p class="card-text">${producto.precio}</p>
-                <button class="btn btn-success">Agregar</button>
+                <button class="productoAgregar btn btn-success" id="${producto.id}">Agregar</button>
             </div>
 `;
-contenedorCards.appendChild(div);
+        contenedorCards.appendChild(div);
     });
+    actualizarBotones();
+    
 }
-insertar(productos);
+insertarCategoria(productos);
 
 
 botonesCategoria.forEach(boton => {
@@ -34,11 +38,54 @@ botonesCategoria.forEach(boton => {
 
         if (e.currentTarget.id !== 'todos') {
             const productoBotonCategoria = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
-            insertar(productoBotonCategoria);
+            insertarCategoria(productoBotonCategoria);
         } else {
-            insertar(productos);
+            insertarCategoria(productos);
         }
         
 
     })
 })
+
+
+//FUNCIONES PARA AGREGAR LOS PRODUCTOS AL CARRITO
+function actualizarBotones (){
+    botonesAgregar = document.querySelectorAll('.productoAgregar');
+
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener('click', agregarAlCarrito)
+    });
+    
+}
+
+const productosCarritoLs = JSON.parse(localStorage.getItem('productosDelCarrito'));
+let productosCarrito;
+
+if (productosCarritoLs) {
+    productosCarrito = productosCarritoLs;
+}else{
+    productosCarrito = [];
+}
+
+function agregarAlCarrito (e) {
+    let idBoton = e.currentTarget.id
+    const productoAgregado = productos.find(producto => producto.id === idBoton);
+    
+    if(productosCarrito.some(producto => producto.id === idBoton)) {
+        const index = productosCarrito.findIndex(producto => producto.id === idBoton);
+        productosCarrito[index].cantidad++;
+
+    } else{
+        productoAgregado.cantidad = 1;
+        productosCarrito.push(productoAgregado);
+    }
+    
+    localStorage.setItem('productosDelCarrito', JSON.stringify(productosCarrito));
+
+} 
+
+
+
+
+//JS DE LA PAGINA DEL CARRITO
+
