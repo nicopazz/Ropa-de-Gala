@@ -7,6 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/index.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
 </head>
 <body>
     <header>
@@ -52,21 +56,21 @@
             <div class="contenedorGlobal row">
                 <aside class="contenedorAside d-flex flex-column justify-content-between col-3" id="seccionCategorias">
                     <div class="mt-4">
-                        <h1 class="tituloAside text-center fw-bold">Categorías</h1>
+                        <h1 class="tituloAside text-center fw-bold animate__animated animate__bounceInLeft">Categorías</h1>
                     </div>
                     <div class="contenedorUl">
                         <ul class="d-flex flex-column gap-4 text-center">
                             <li>
-                                <button class="asideBotones active" id="todos">todos los productos</button>
+                                <button class="fw-bold asideBotones active animate__animated animate__backInDown" id="todos">Todos los productos</button>
                             </li>
                             <li>
-                                <button id="sacos" class="asideBotones">Sacos</button>
+                                <button id="sacos" class="fw-bold asideBotones animate__animated animate__backInDown">Sacos</button>
                             </li>
                             <li>
-                                <button id="pantalones" class="asideBotones">Pantalones</button>
+                                <button id="pantalones" class="fw-bold asideBotones animate__animated animate__backInDown">Pantalones</button>
                             </li>
                             <li>
-                              <button id="camisas" class="asideBotones">Camisas</button>
+                              <button id="camisas" class="fw-bold asideBotones animate__animated animate__backInDown">Camisas</button>
                           </li>
                             <a href="./paginas/carrito.html"><button id="carrito" class="btn btn-success"><i class="bi bi-cart-check"></i>Carrito</button></a>
                         </ul>
@@ -76,7 +80,8 @@
                     </div>
                 </aside>
                 <div class="contenedorDiv col-9 p-3" id="seccionRopa">
-                    <h2 class="tituloDiv text-center">Sección ropa</h2>
+                    <h2 class="tituloDiv text-center animate__animated animate__bounceInLeft">Sección ropa</h2>
+                    <hr class="line animate__animated animate__backInDown">
                     <div class="contenedorCards d-flex flex-wrap justify-content-center gap-5 mt-4">
                         <!-- IMPORTADO DESDE EL JS -->
                     </div>
