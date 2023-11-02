@@ -13,8 +13,8 @@ productos.forEach(producto => {
   <td><img src = "${producto.imagen}" style= "width:5rem"></td>
   <td class="text-center"><input class="inputCheck" type="checkbox" ${imputCheck} onclick="changeProduct('${producto.titulo}')" ></td>
   <td class="text-center"> 
-    <button type="button" class="btn btn-outline-info">Editar</button>
-    <button type="button" class="btn btn-outline-danger">Borrar</button>
+    <button type="button" class="btn btn-info">Editar</button>
+    <button type="button" class="btn btn-danger">Borrar</button>
   </td>
   `
   
@@ -22,6 +22,27 @@ productos.forEach(producto => {
 });
 
 
+const arrNuevosProductos = JSON.parse(localStorage.getItem("arrNuevosProductos")) || [];
+
+const datosIngresados = (e) => {
+ e.preventDefault();
+
+  const producto = document.getElementById("nuevoProducto").value;
+  const categoria = document.getElementById("categoria").value;
+  const precio = document.getElementById("precio").value;
+  const imagen = document.getElementById("imagen").value;
+  
+  const nuevoProducto = {producto,categoria,precio,imagen}
+
+  
+  arrNuevosProductos.push(nuevoProducto);
+  localStorage.setItem("arrNuevosProductos",JSON.stringify(arrNuevosProductos));
+ 
+}
+
+
+
+const button = document.getElementById("formData").addEventListener("submit", datosIngresados);
 
 
 
