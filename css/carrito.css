@@ -48,6 +48,28 @@
     margin-bottom: 0;
 }
 
-@media (max-width: 729px) {
+@media (max-width: 704px) {
+    .contenedorAside {
+        padding: 0;
+    }
+}
 
+@media (max-width: 575px) {
+    .contenedorUl {
+        display: none;
+    }
+    .contenedorAside {
+        visibility: hidden;
+        position: absolute;
+        
+    }
+    .botonInicio {
+        display: none;
+    }
+}
+
+@media (min-width: 576px){
+    .botonInicioFin{
+        display: none;
+    }
 }

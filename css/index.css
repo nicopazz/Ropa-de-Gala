@@ -60,6 +60,7 @@ body {
     .contenedorAside {
         position: static;
     }
+
     .asideBotones {
         width: 80%;
         border-top-right-radius: 1rem;
@@ -74,5 +75,11 @@ body {
 
     .divCategoria{
         margin-top: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .homero {
+        display: none;
     }
 }

@@ -19,23 +19,20 @@
     </header>
     <main>
         <div class="container-fluid">
-            <div class="contenedorGlobal row">
-                <aside class="contenedorAside d-flex flex-column justify-content-between col-sm-3" id="seccionCategorias">
+            <div class="contenedorGlobal row animate__animated animate__backInDown">
+                <aside class="contenedorAside d-flex justify-content-around flex-column  col-sm-3" id="seccionCategorias">
                     <div>
-                        <h1 class="tituloAside text-center fw-bold">Rolling <br>Shop</h1>
+                        <h1 class="tituloAside text-center fw-bold animate__animated animate__backInDown">Rolling <br>Shop</h1>
                     </div>
                     <div class="contenedorUl">
                         <ul class="d-flex flex-column gap-4 text-center">
                             <ol>
-                                <button id="sacos" class="asideBotones active animate__animated animate__backInDown">Su carrito</button>
+                                <button id="sacos" class="asideBotones  active animate__animated animate__backInDown">Su carrito</button>
                             </ol>
                             <ol>
-                                <button class=" btn btn-warning animate__animated animate__backInDown" id="todos"><a id="volverAlInicio" href="../index.html">Volver al inicio</a></button>
+                                <button class="botonInicio btn btn-warning animate__animated animate__backInDown" id="todos"><a id="volverAlInicio" href="../index.html">Volver al inicio</a></button>
                             </ol>
                         </ul>
-                    </div>
-                    <div>
-                        <h3>footer</h3>
                     </div>
                 </aside>
                 <div class="contenedorDiv col-sm-9 p-3" id="seccionRopa">
@@ -46,7 +43,7 @@
                             <!-- INSERTADO DESDE JS -->
                         </div>
                         <div class="contenedorFuncionesCarrito d-flex justify-content-between">
-                            <div class="my-auto">
+                            <div class="my-auto d-flex flex-column">
                                 <button id="vaciarCarrito" class="btn btn-danger small">Vaciar carrito</button>
                             </div>
                             <div class="d-flex mt-3">
@@ -60,6 +57,9 @@
                             </div>
                         </div>
                     </div>
+                </div>
+                <div class="botonInicioFin mt-4">
+                    <button class="btn btn-warning" id="todos"><a id="volverAlInicio" href="../index.html">Volver al inicio</a></button>
                 </div>
             </div>
         </div>
