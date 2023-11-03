@@ -4,8 +4,7 @@ import productos from './arrayProductos.js';
 const contenedorCards = document.querySelector('.contenedorCards');
 const botonesCategoria = document.querySelectorAll('.asideBotones');
 let botonesAgregar = document.querySelectorAll('.productoAgregar');
-let productosLs = JSON.parse(localStorage.getItem('Productos'));
-console.log(productosLs);
+
 
 
 const insertarCategoria = (productosElegidos) => {
@@ -27,7 +26,7 @@ const insertarCategoria = (productosElegidos) => {
     actualizarBotones();
     
 }
-insertarCategoria(productosLs);
+insertarCategoria(productos);
 
 
 botonesCategoria.forEach(boton => {
@@ -38,10 +37,10 @@ botonesCategoria.forEach(boton => {
         e.currentTarget.classList.add('active');
 
         if (e.currentTarget.id !== 'todos') {
-            const productoBotonCategoria = productosLs.filter(producto => producto.categoria.id === e.currentTarget.id);
+            const productoBotonCategoria = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
             insertarCategoria(productoBotonCategoria);
         } else {
-            insertarCategoria(productosLs);
+            insertarCategoria(productos);
         }
         
 
@@ -70,7 +69,7 @@ if (productosCarritoLs) {
 
 function agregarAlCarrito (e) {
     let idBoton = e.currentTarget.id
-    const productoAgregado = productosLs.find(producto => producto.id === idBoton);
+    const productoAgregado = productos.find(producto => producto.id === idBoton);
     
     if(productosCarrito.some(producto => producto.id === idBoton)) {
         const index = productosCarrito.findIndex(producto => producto.id === idBoton);
