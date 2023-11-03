@@ -14,7 +14,7 @@ body {
 #seccionRopa {
     max-width: 100%;
     color: rgb(66, 80, 190);
-    background-color: white;
+    background-color: rgb(203, 208, 249);
     margin-top: 7vh;
     border-radius: 2%;
 
@@ -39,7 +39,7 @@ body {
     width: 100%;
 }
 .active{
-    background-color: white;
+    background-color: rgb(203, 208, 249);
     width: 100%;
 }
 
@@ -54,4 +54,32 @@ body {
     border-top-right-radius: 5%;
     border-top-left-radius: 5%;
     color: white;
+}
+
+@media (max-width: 575px) {
+    .contenedorAside {
+        position: static;
+    }
+
+    .asideBotones {
+        width: 80%;
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+    }
+    ul {
+        padding-left: 0;
+    }
+    .contenedorUl {
+        margin-right: 30px;
+    }
+
+    .divCategoria{
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 800px) {
+    .homero {
+        display: none;
+    }
 }
