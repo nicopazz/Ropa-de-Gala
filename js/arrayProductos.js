@@ -142,7 +142,6 @@ const productos = [
         },
         imagen: '../img/camisas/camisa 4.jpeg'
     }
-    
 ]
 export default productos;
 export {productos};
