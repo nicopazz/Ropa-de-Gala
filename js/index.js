@@ -1,4 +1,7 @@
 import productos from './arrayProductos.js';
+import navbar from '../componentes/navbar.js';
+
+document.addEventListener('DOMContentLoaded', navbar);
 
 
 const contenedorCards = document.querySelector('.contenedorCards');
