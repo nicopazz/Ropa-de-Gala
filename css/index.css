@@ -6,6 +6,9 @@ body {
     background-color: rgb(66, 80, 190);
 }
 
+#nav {
+    background-color: rgb(68, 74, 112);
+}
 
 #seccionCategorias {
     max-width: 100%;
@@ -18,6 +21,14 @@ body {
     margin-top: 7vh;
     border-radius: 2%;
 
+}
+
+#buscador {
+    width: 80%;
+}
+
+#botonHamburguesaHomero{
+    width: 2rem;
 }
 
 .contenedorAside {
@@ -59,7 +70,12 @@ body {
 @media (max-width: 575px) {
     .contenedorAside {
         position: static;
+        visibility: hidden;
     }
+
+    /* .contenedorDiv{
+        position: absolute;
+    } */
 
     .asideBotones {
         width: 80%;
@@ -71,15 +87,34 @@ body {
     }
     .contenedorUl {
         margin-right: 30px;
+        visibility: hidden;
     }
 
     .divCategoria{
         margin-top: 0;
     }
+
 }
 
 @media (max-width: 800px) {
     .homero {
         display: none;
+    }
+}
+
+@media (min-width: 992px) {
+    .ocultos {
+        visibility: hidden;
+        position: absolute;
+    }
+}
+
+@media (min-width: 991px) {
+    .textoCategoriaNav {
+        visibility: hidden;
+    }
+    .registroNav {
+        visibility: hidden;
+        position: absolute;
     }
 }
