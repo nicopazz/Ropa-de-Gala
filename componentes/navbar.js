@@ -2,6 +2,8 @@ const header = document.querySelector('header');
 
 
 const navbar = () => {
+    const user = JSON.parse(localStorage.getItem('users'))|| undefined;
+    
     return (header.innerHTML = `
     <nav class="navbar navbar-expand-lg py-3 fixed-top border border-secondary navbar-dark" id="nav">
             <div class="container-fluid justify-content-end">

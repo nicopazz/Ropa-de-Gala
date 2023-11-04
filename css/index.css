@@ -69,7 +69,7 @@ body {
 
 @media (max-width: 575px) {
     .contenedorAside {
-        position: static;
+        position: absolute;
         visibility: hidden;
     }
 
