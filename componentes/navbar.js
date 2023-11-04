@@ -1,7 +1,6 @@
 const header = document.querySelector('header');
 
 
-
 const navbar = () => {
     return (header.innerHTML = `
     <nav class="navbar navbar-expand-lg py-3 fixed-top border border-secondary navbar-dark" id="nav">
