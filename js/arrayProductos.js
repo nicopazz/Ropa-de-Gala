@@ -4,6 +4,7 @@ const productos = [
         titulo: 'Saco 1',
         id: 'saco-01',
         precio: 100,
+        stock: 20,
         categoria: {
             nombre:'trajes',
             id:'sacos'
@@ -15,6 +16,7 @@ const productos = [
         titulo: 'Saco 2',
         id: 'saco-02',
         precio: 100,
+        stock: 20,
         categoria: {
             nombre:'trajes',
             id:'sacos'
@@ -26,6 +28,7 @@ const productos = [
         titulo: 'Saco 3',
         id: 'saco-03',
         precio: 100,
+        stock: 20,
         categoria: {
             nombre:'trajes',
             id:'sacos'
@@ -37,6 +40,7 @@ const productos = [
         titulo: 'Saco 4',
         id: 'saco-04',
         precio: 100,
+        stock: 20,
         categoria: {
             nombre:'trajes',
             id:'sacos'
@@ -49,6 +53,7 @@ const productos = [
         titulo: 'Pantalon 1',
         id: 'pantalon-01',
         precio: 100,
+        stock: 20,
         categoria: {
             nombre:'trajes',
             id:'pantalones'
@@ -60,6 +65,7 @@ const productos = [
         titulo: 'Pantalon 2',
         id: 'pantalon-02',
         precio: 100,
+        stock: 20,
         categoria: {
             nombre:'trajes',
             id:'pantalones'
@@ -71,6 +77,7 @@ const productos = [
         titulo: 'Pantalon 3',
         id: 'pantalon-03',
         precio: 100,
+        stock: 20,
         categoria: {
             nombre:'trajes',
             id:'pantalones'
@@ -82,6 +89,7 @@ const productos = [
         titulo: 'Pantalon 4',
         id: 'pantalon-04',
         precio: 100,
+        stock: 20,
         categoria: {
             nombre:'trajes',
             id:'pantalones'
@@ -94,6 +102,7 @@ const productos = [
         titulo: 'Camisa 1',
         id: 'camisa-01',
         precio: 100,
+        stock: 20,
         categoria: {
             nombre:'trajes',
             id:'camisas'
@@ -104,6 +113,7 @@ const productos = [
         titulo: 'Camisa 2',
         id: 'camisa-02',
         precio: 100,
+        stock: 20,
         categoria: {
             nombre:'trajes',
             id:'camisas'
@@ -114,6 +124,7 @@ const productos = [
         titulo: 'Camisa 3',
         id: 'camisa-03',
         precio: 100,
+        stock: 20,
         categoria: {
             nombre:'trajes',
             id:'camisas'
@@ -124,6 +135,7 @@ const productos = [
         titulo: 'Camisa 4',
         id: 'camisa-04',
         precio: 100,
+        stock: 20,
         categoria: {
             nombre:'trajes',
             id:'camisas'
