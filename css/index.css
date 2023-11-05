@@ -31,6 +31,14 @@ body {
     width: 2rem;
 }
 
+#bienvenidoUsuario {
+    margin-right: 190px;
+}
+
+#cerrarSesion{
+    width: 3rem;
+}
+
 .contenedorAside {
     padding: 2rem;
     position: sticky;
@@ -66,6 +74,7 @@ body {
     border-top-left-radius: 5%;
     color: white;
 }
+
 
 @media (max-width: 575px) {
     .contenedorAside {

@@ -1,3 +1,7 @@
+import navbar from '../componentes/navbar.js';
+document.addEventListener('DOMContentLoaded', navbar);
+
+
 
 const productosLs = JSON.parse(localStorage.getItem('productosDelCarrito'));
 console.log(productosLs);

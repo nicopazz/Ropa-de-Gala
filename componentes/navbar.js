@@ -2,8 +2,8 @@ const header = document.querySelector('header');
 
 
 const navbar = () => {
-    const user = JSON.parse(localStorage.getItem('users'))|| undefined;
-    
+    const user = JSON.parse(localStorage.getItem('userLogged'))|| undefined;
+    // console.log(user[0].username);
     return (header.innerHTML = `
     <nav class="navbar navbar-expand-lg py-3 fixed-top border border-secondary navbar-dark" id="nav">
             <div class="container-fluid justify-content-end">
@@ -37,24 +37,44 @@ const navbar = () => {
                             </li>
                             <hr style="color: white;">
                             <li class="nav-item p-3 py-md-1 d-flex justify-content-around">
-                                <a href="./paginas/login.html">
-                                <button 
-                                type="button" 
-                                class="btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown"><i class="bi bi-person-fill me-3" ></i>
-                                Ingresar
-                                </button>
-                                </a>
-                                <a href="./paginas/signup.html">
-                                <button 
-                                type="button" 
-                                class="registroNav btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown">
-                                Registrate
-                                </button>
-                                </a>
+                                
+                                ${user 
+                                    ? `
+                                    <li id="bienvenidoUsuario">
+                                    <strong style="color: white;"> Bienvenido ${user[0].username}</strong>
+                                    </li>
+                                    
+                                    ` 
+                                    : `
+                                    <a href="./paginas/login.html">
+                                    <button 
+                                    type="button" 
+                                    class="btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown"><i class="bi bi-person-fill me-3" ></i>
+                                    Ingresar
+                                    </button>
+                                    </a>
+                                    <a href="./paginas/signup.html">
+                                    <button 
+                                    type="button" 
+                                    class="registroNav btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown">
+                                    Registrate
+                                    </button>
+                                    </a>
+                                    `
+                                }
+                                ${user
+                                    ? `
+                                    <button id="cerrarSesion" class="btn btn-outline-light fw-bold ms-2 ">
+                                    <i class="bi bi-box-arrow-right"></i>
+                                    </button>
+                                    `
+                                    : ""
+                                }
                             </li>
                             <hr class=" ocultos " style="color: white;">
                             <li class="nav-item p-3 py-md-1">
-                                <a href="./paginas/carrito.html"><button id="carrito" class="btn btn-success animate__animated animate__backInDown"><i class="bi bi-cart-check"></i>Carrito</button></a>
+                                <a href="./paginas/carrito.html">
+                                <button id="carrito" class="btn btn-success animate__animated animate__backInDown"><i class="bi bi-cart-check"></i>Carrito</button></a>
                             </li>
                             <li id="search-login">
                                 <form id="buscador" class="d-flex animate__animated animate__backInDown">
@@ -66,7 +86,7 @@ const navbar = () => {
                                     required
                                     maxlength="15"
                                     minlength="3"
-                                    pattern="[a-zA-Z ]{2,254}"
+                                    
                                     />
                                     <button class="btn btn-outline-light fw-bold" type="submit">
                                         <i class="bi bi-search"></i>
@@ -84,26 +104,31 @@ const navbar = () => {
             </div>
         </nav>
     `)
+    
 }
 
-const botonesCategoria = document.querySelectorAll('.asideBoton');
-console.log(botonesCategoria);
 
-botonesCategoria.forEach(boton => {
-    boton.addEventListener('click', (e) => {
 
-        botonesCategoria.forEach(boton => boton.classList.remove('active'));
 
-        e.currentTarget.classList.add('active');
+// const botonesCategoria = document.querySelectorAll('.asideBoton');
+// console.log(botonesCategoria);
 
-        if (e.currentTarget.id !== 'todos') {
-            const productoBotonCategoria = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
-            insertarCategoria(productoBotonCategoria);
-        } else {
-            insertarCategoria(productos);
-        }
+// botonesCategoria.forEach(boton => {
+//     boton.addEventListener('click', (e) => {
 
-    })
-})
+//         botonesCategoria.forEach(boton => boton.classList.remove('active'));
+
+//         e.currentTarget.classList.add('active');
+
+//         if (e.currentTarget.id !== 'todos') {
+//             const productoBotonCategoria = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
+//             insertarCategoria(productoBotonCategoria);
+//         } else {
+//             insertarCategoria(productos);
+//         }
+
+//     })
+// })
 
 export default navbar;
+
