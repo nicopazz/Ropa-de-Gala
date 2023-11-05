@@ -1,3 +1,10 @@
+import navbar from '../componentes/navbar.js';
+import footer from '../componentes/footer.js';
+
+document.addEventListener('DOMContentLoaded', navbar);
+document.addEventListener('DOMContentLoaded', footer);
+
+
 
 const productosLs = JSON.parse(localStorage.getItem('productosDelCarrito'));
 console.log(productosLs);
@@ -19,7 +26,7 @@ function cargarProductosCarrito() {
         
         productosLs.forEach(producto => {
             const div = document.createElement('div');
-            div.classList.add("d-flex","justify-content-between");
+            div.classList.add("d-flex","justify-content-between", 'animate__animated', 'animate__fadeIn');
             div.id = 'productoSeleccionado'
             div.innerHTML = `
             <img id="imgCarrito" style="width: 5rem" src="${producto.imagen}" alt="${producto.titulo}">

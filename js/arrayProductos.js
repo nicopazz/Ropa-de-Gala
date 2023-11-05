@@ -1,7 +1,7 @@
 const productos = [
     //SACOS
     {
-        titulo: 'saco 1',
+        titulo: 'Saco 1',
         id: 'saco-01',
         precio: 100,
         stock: 20,
@@ -13,7 +13,7 @@ const productos = [
 
     },
     {
-        titulo: 'saco 2',
+        titulo: 'Saco 2',
         id: 'saco-02',
         precio: 100,
         stock: 20,
@@ -25,7 +25,7 @@ const productos = [
 
     },
     {
-        titulo: 'saco 3',
+        titulo: 'Saco 3',
         id: 'saco-03',
         precio: 100,
         stock: 20,
@@ -37,7 +37,7 @@ const productos = [
 
     },
     {
-        titulo: 'saco 4',
+        titulo: 'Saco 4',
         id: 'saco-04',
         precio: 100,
         stock: 20,
@@ -50,7 +50,7 @@ const productos = [
     },
     //PANTALONES
     {
-        titulo: 'pantalon 1',
+        titulo: 'Pantalon 1',
         id: 'pantalon-01',
         precio: 100,
         stock: 20,
@@ -62,7 +62,7 @@ const productos = [
 
     },
     {
-        titulo: 'pantalon 2',
+        titulo: 'Pantalon 2',
         id: 'pantalon-02',
         precio: 100,
         stock: 20,
@@ -74,7 +74,7 @@ const productos = [
 
     },
     {
-        titulo: 'pantalon 3',
+        titulo: 'Pantalon 3',
         id: 'pantalon-03',
         precio: 100,
         stock: 20,
@@ -86,7 +86,7 @@ const productos = [
 
     },
     {
-        titulo: 'pantalon 4',
+        titulo: 'Pantalon 4',
         id: 'pantalon-04',
         precio: 100,
         stock: 20,

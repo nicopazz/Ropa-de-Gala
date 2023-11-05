@@ -1,4 +1,10 @@
 import productos from './arrayProductos.js';
+import navbar from '../componentes/navbar.js';
+import footer from '../componentes/footer.js';
+
+document.addEventListener('DOMContentLoaded', navbar);
+document.addEventListener('DOMContentLoaded', footer);
+
 
 
 const contenedorCards = document.querySelector('.contenedorCards');
@@ -11,13 +17,13 @@ const insertarCategoria = (productosElegidos) => {
     contenedorCards.innerHTML = '';
     productosElegidos.forEach(producto => {
         let div = document.createElement('div');
-        div.classList.add('card');
+        div.classList.add('card','filtro', 'animate__animated', 'animate__fadeIn');
         div.style = "width: 12rem";
         div.innerHTML = `
             <img src="${producto.imagen}" class="card-img-top" alt="${producto.titulo}">
             <div class="card-body">
                 <h5 class="card-title">${producto.titulo}</h5>
-                <p class="card-text">${producto.precio}</p>
+                <p class="card-text">$${producto.precio}</p>
                 <button class="productoAgregar btn btn-success" id="${producto.id}">Agregar</button>
             </div>
 `;
@@ -86,6 +92,4 @@ function agregarAlCarrito (e) {
 
 
 
-
-//JS DE LA PAGINA DEL CARRITO
 
