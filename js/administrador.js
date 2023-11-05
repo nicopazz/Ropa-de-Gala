@@ -1,7 +1,6 @@
-import { productos } from "./arrayProductos.js";
+const arrNuevosProductos = JSON.parse(localStorage.getItem("Productos"));
 
-
-productos.forEach(producto => {
+arrNuevosProductos.forEach(producto => {
   
   const productRow = document.createElement('tr');
   productRow.classList.add('rowTable');
@@ -26,10 +25,9 @@ productos.forEach(producto => {
 });
 
 
-const arrNuevosProductos = JSON.parse(localStorage.getItem("arrNuevosProductos")) || [];
 
 const datosIngresados = (e) => {
- e.preventDefault();
+e.preventDefault();
 
   const producto = document.getElementById("nuevoProducto").value;
   const categoria = document.getElementById("categoria").value;
@@ -38,14 +36,13 @@ const datosIngresados = (e) => {
   const imagen = document.getElementById("imagen").value;
   
   const nuevoProducto = {producto,categoria,precio,stock,imagen}
-
   
   arrNuevosProductos.push(nuevoProducto);
-  localStorage.setItem("arrNuevosProductos",JSON.stringify(arrNuevosProductos));
+  localStorage.setItem("Productos",JSON.stringify(arrNuevosProductos));
   alert("Producto cargado correctamente");
   clear();
   location.reload();
- 
+  console.log(arrNuevosProductos);
 }
 
 function clear() {
@@ -57,7 +54,7 @@ function clear() {
 }
 
 function mostrarNuevosProductos() {
-  const nuevosProductos = JSON.parse(localStorage.getItem('arrNuevosProductos'));
+  const nuevosProductos = JSON.parse(localStorage.getItem('Productos'));
   
   nuevosProductos.forEach(product => {
   const productRow = document.createElement('tr');
@@ -86,3 +83,4 @@ function mostrarNuevosProductos() {
 
 const button = document.getElementById("formData").addEventListener("submit", datosIngresados);
 mostrarNuevosProductos();
+
