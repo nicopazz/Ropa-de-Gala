@@ -16,6 +16,10 @@ return ( contenedorFooter.innerHTML=
                 </a>
                 <a class="mx-0 text-center" href="/pages/contacto.html"><i class="bi bi-people-fill"></i></i>Contáctanos
                 </a>
+                <a class="mx-0 text-center" href="/pages/contacto.html"><i class="bi bi-geo-alt-fill"></i>Locales
+                </a>
+                <a class="mx-0 text-center" href="/pages/contacto.html"><i class="bi bi-credit-card"></i>Promociones bancarias
+                </a>
             </div>
             <div class="iconosFooter col-sm-4 my-sm-auto d-flex justify-content-evenly justify-content-sm-around mt-3">
                 <a href="#">
