@@ -22,6 +22,28 @@
     text-decoration: none;
 }
 
+#total {
+    margin-bottom: 0;
+}
+
+#seccionRopa{
+    margin-top: 100px;
+}
+
+#carrito {
+    visibility: hidden;
+    position: absolute;
+}
+
+#search-login{
+    visibility: hidden;
+    position: absolute;
+}
+
+#bienvenidoUsuario{
+    visibility: hidden;
+}
+
 .botonEliminar {
     background-color: transparent;
     border: 0;
@@ -44,9 +66,10 @@
     background-color: rgb(66, 80, 190);
 }
 
-#total {
-    margin-bottom: 0;
-}
+/* .promociones {
+    
+} */
+
 
 @media (max-width: 704px) {
     .contenedorAside {
