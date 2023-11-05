@@ -6,6 +6,16 @@ body {
     background-color: rgb(66, 80, 190);
 }
 
+footer{
+    background-color: rgb(68, 74, 112);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
 #nav {
     background-color: rgb(68, 74, 112);
 }
@@ -80,6 +90,11 @@ body {
     .contenedorAside {
         position: absolute;
         visibility: hidden;
+    }
+
+    .textoTitulo{
+        text-align: center;
+        margin-bottom: 1rem;
     }
 
     /* .contenedorDiv{
