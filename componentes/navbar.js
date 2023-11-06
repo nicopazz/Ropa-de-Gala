@@ -110,6 +110,15 @@ const navbar = () => {
 }
 
 
+document.addEventListener('keyup', e => {
+    if (e.target.matches('.form-control')) {
+        document.querySelectorAll('.card-title').forEach(card => {
+            card.textContent.toLowerCase().includes(e.target.value) 
+            ? card.classList.remove('filtro')
+            : card.classList.add('filtro')
+        })
+    }
+})
 
 
 // const botonesCategoria = document.querySelectorAll('.asideBoton');
