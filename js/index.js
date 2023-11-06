@@ -26,7 +26,7 @@ const insertarCategoria = (productosElegidos) => {
                 <button class="productoAgregar btn btn-success" id="${producto.id}">Agregar</button>
             </div>
 `;
-        contenedorCards.appendChild(div);
+    contenedorCards.appendChild(div);
     });
     actualizarBotones();
     
@@ -47,8 +47,6 @@ botonesCategoria.forEach(boton => {
         } else {
             insertarCategoria(productosLocalS);
         }
-        
-
     })
 })
 
@@ -60,7 +58,6 @@ function actualizarBotones (){
     botonesAgregar.forEach(boton => {
         boton.addEventListener('click', agregarAlCarrito)
     });
-    
 }
 
 const productosCarritoLs = JSON.parse(localStorage.getItem('productosDelCarrito'));
@@ -91,4 +88,28 @@ function agregarAlCarrito (e) {
 
 
 
+//FUNCION PARA CERRAR SESION
+document.addEventListener('DOMContentLoaded', function (){
+    const botonCerrarSesion = document.getElementById('cerrarSesion')
+    console.log(botonCerrarSesion);
 
+    botonCerrarSesion.addEventListener("click", function () {
+        localStorage.removeItem("userLogged");
+        alert('Sesión cerrada');
+        window.location.reload();
+    });
+})
+
+
+
+
+//FUNCION PARA EL BUSCADOR
+// document.addEventListener('keyup', e => {
+//     if (e.target.matches('.form-control')) {
+//         document.querySelectorAll('.card-title').forEach(card => {
+//             card.textContent.toLowerCase().includes(e.target.value) 
+//             ? card.classList.remove('filtro')
+//             : card.classList.add('filtro')
+//         })
+//     }
+// })

@@ -1,4 +1,4 @@
-import productos from '../js/arrayProductos.js';
+// import productos from '../js/arrayProductos.js';
 
 const header = document.querySelector('header');
 
@@ -116,21 +116,10 @@ const navbar = () => {
 }
 
 
-//FUNCION PARA CERRAR SESION
-document.addEventListener('DOMContentLoaded', function (){
-    const botonCerrarSesion = document.getElementById('cerrarSesion')
-    console.log(botonCerrarSesion);
-
-    botonCerrarSesion.addEventListener("click", function () {
-        localStorage.removeItem("userLogged");
-        alert('Sesión cerrada');
-    });
-})
 
 
 
-
-/*FUNCION PARA EL BUSCADOR
+//FUNCION PARA EL BUSCADOR
 document.addEventListener('keyup', e => {
     if (e.target.matches('.form-control')) {
         document.querySelectorAll('.card-title').forEach(card => {
@@ -139,7 +128,7 @@ document.addEventListener('keyup', e => {
             : card.classList.add('filtro')
         })
     }
-})*/
+})
 
 export default navbar;
 
