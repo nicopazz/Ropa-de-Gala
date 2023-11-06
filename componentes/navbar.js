@@ -1,3 +1,5 @@
+import productos from '../js/arrayProductos.js';
+
 const header = document.querySelector('header');
 
 
@@ -18,22 +20,26 @@ const navbar = () => {
                 </div>
                 <div class="offcanvas-body d-flex flex-column px-0">
                     <ul class="navbar-nav fs-5 justify-content-end">
-                        <li class="nav-item p-3 py-md-1">
+                        <ol class="nav-item p-3 py-md-1">
                             <hr class=" ocultos " style="color: white;">
-                        </li>
+                        </ol>
                             <p class="textoCategoriaNav text-white text-center"> Categorías </p>
-                        <li id="todos"  class=" ocultos text-white asideBoton"><i class="bi bi-arrow-right-circle-fill"></i>
-                            Todos los productos
-                        </li>
-                        <li id="sacos" class=" ocultos text-white asideBoton"><i class="bi bi-arrow-right-circle-fill"></i>
-                            Sacos
-                        </li>
-                        <li id="pantalones" class=" ocultos text-white asideBoton"><i class="bi bi-arrow-right-circle-fill"></i>
-                            Pantalones
-                        </li>
-                        <li id="camisas" class=" ocultos text-white asideBoton"><i class="bi bi-arrow-right-circle-fill"></i>
-                            Camisas
-                        </li>
+
+                        <ol class=" ocultos text-white asideBotones">
+                            <button class="fw-bold asideBotones" id="todos"><i class="bi bi-arrow-right-circle-fill"></i>Todos los productos</button>
+                        </ol>
+
+                        <ol class=" ocultos text-white asideBotones">
+                            <button id="sacos" class="fw-bold asideBotones animate__animated animate__backInDown"><i class="bi bi-arrow-right-circle-fill"></i>Sacos</button>
+                        </ol>
+
+                        <ol class=" ocultos text-white asideBotones">
+                            <button id="pantalones" class="fw-bold asideBotones animate__animated animate__backInDown"><i class="bi bi-arrow-right-circle-fill"></i>Pantalones</button>
+                        </ol>
+
+                        <ol class=" ocultos text-white asideBotones">
+                        <button id="camisas" class="fw-bold asideBotones animate__animated animate__backInDown"><i class="bi bi-arrow-right-circle-fill"></i>Camisas</button>
+                        </ol>
                             <hr style="color: white;">
                         <li class="nav-item p-3 py-md-1 d-flex justify-content-around">
                                 
@@ -110,6 +116,21 @@ const navbar = () => {
 }
 
 
+//FUNCION PARA CERRAR SESION
+document.addEventListener('DOMContentLoaded', function (){
+    const botonCerrarSesion = document.getElementById('cerrarSesion')
+    console.log(botonCerrarSesion);
+
+    botonCerrarSesion.addEventListener("click", function () {
+        localStorage.removeItem("userLogged");
+        alert('Sesión cerrada');
+    });
+})
+
+
+
+
+/*FUNCION PARA EL BUSCADOR
 document.addEventListener('keyup', e => {
     if (e.target.matches('.form-control')) {
         document.querySelectorAll('.card-title').forEach(card => {
@@ -118,28 +139,7 @@ document.addEventListener('keyup', e => {
             : card.classList.add('filtro')
         })
     }
-})
-
-
-// const botonesCategoria = document.querySelectorAll('.asideBoton');
-// console.log(botonesCategoria);
-
-// botonesCategoria.forEach(boton => {
-//     boton.addEventListener('click', (e) => {
-
-//         botonesCategoria.forEach(boton => boton.classList.remove('active'));
-
-//         e.currentTarget.classList.add('active');
-
-//         if (e.currentTarget.id !== 'todos') {
-//             const productoBotonCategoria = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
-//             insertarCategoria(productoBotonCategoria);
-//         } else {
-//             insertarCategoria(productos);
-//         }
-
-//     })
-// })
+})*/
 
 export default navbar;
 
