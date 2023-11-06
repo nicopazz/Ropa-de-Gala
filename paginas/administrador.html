@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pagina de administrador</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="/css/administrador.css">
 </head>
-<body style="background-color: lightslategray;">
+<body>
   
-    <h1 class="text-center mt-5">Pagina de administrador</h1>
+    <h1 class="text-center mt-5 fw-bold animate__animated animate__bounceInLeft">Pagina de administrador</h1>
     
      <!-- Boton modal -->
       <div class="container mt-5 px-4">
@@ -21,7 +21,7 @@
     <!-- Modal -->
 <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content" style="background-color: lightslategray;">
+    <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="ModalLabel">Agregar nuevo producto</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
@@ -38,7 +38,12 @@
             </div>
             <div class="mb-3">
               <label for="categoria" class="form-label">Categoria</label>
-              <input type="text" class="form-control" id="categoria">
+              <select class="form-select" aria-label="Default select example" id="categoria" >
+                <option value="" disabled selected >Seleccione una opcion</option>
+                <option value="sacos">Sacos</option>
+                <option value="pantalones">Pantalones</option>
+                <option value="camisas">Camisas</option>
+              </select>
             </div>
             <div class="mb-3">
               <label for="precio" class="form-label">Precio</label>
@@ -64,8 +69,8 @@
 </div>
   
 <!-- Tabla de productos -->
-<div class="container mt-2">
-  <table class="table table-dark">
+<div class="container mt-2" >
+  <table class="table" id="tableStyle">
       <thead>
         <tr>
           <th scope="col">Productos</th>
@@ -79,6 +84,7 @@
       </thead>
       <tbody>
        
+      
       </tbody>
   </table>
 </div>
