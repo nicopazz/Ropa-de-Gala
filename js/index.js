@@ -1,4 +1,3 @@
-import productos from './arrayProductos.js';
 import navbar from '../componentes/navbar.js';
 import footer from '../componentes/footer.js';
 
@@ -6,7 +5,7 @@ document.addEventListener('DOMContentLoaded', navbar);
 document.addEventListener('DOMContentLoaded', footer);
 
 
-
+let productosLocalS = JSON.parse(localStorage.getItem('Productos'))
 const contenedorCards = document.querySelector('.contenedorCards');
 const botonesCategoria = document.querySelectorAll('.asideBotones');
 let botonesAgregar = document.querySelectorAll('.productoAgregar');
@@ -27,12 +26,12 @@ const insertarCategoria = (productosElegidos) => {
                 <button class="productoAgregar btn btn-success" id="${producto.id}">Agregar</button>
             </div>
 `;
-        contenedorCards.appendChild(div);
+    contenedorCards.appendChild(div);
     });
     actualizarBotones();
     
 }
-insertarCategoria(productos);
+insertarCategoria(productosLocalS);
 
 
 botonesCategoria.forEach(boton => {
@@ -43,13 +42,11 @@ botonesCategoria.forEach(boton => {
         e.currentTarget.classList.add('active');
 
         if (e.currentTarget.id !== 'todos') {
-            const productoBotonCategoria = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
+            const productoBotonCategoria = productosLocalS.filter(producto => producto.categoria === e.currentTarget.id);
             insertarCategoria(productoBotonCategoria);
         } else {
-            insertarCategoria(productos);
+            insertarCategoria(productosLocalS);
         }
-        
-
     })
 })
 
@@ -61,7 +58,6 @@ function actualizarBotones (){
     botonesAgregar.forEach(boton => {
         boton.addEventListener('click', agregarAlCarrito)
     });
-    
 }
 
 const productosCarritoLs = JSON.parse(localStorage.getItem('productosDelCarrito'));
@@ -75,7 +71,7 @@ if (productosCarritoLs) {
 
 function agregarAlCarrito (e) {
     let idBoton = e.currentTarget.id
-    const productoAgregado = productos.find(producto => producto.id === idBoton);
+    const productoAgregado = productosLocalS.find(producto => producto.id === idBoton);
     
     if(productosCarrito.some(producto => producto.id === idBoton)) {
         const index = productosCarrito.findIndex(producto => producto.id === idBoton);
@@ -92,4 +88,28 @@ function agregarAlCarrito (e) {
 
 
 
+//FUNCION PARA CERRAR SESION
+document.addEventListener('DOMContentLoaded', function (){
+    const botonCerrarSesion = document.getElementById('cerrarSesion')
+    console.log(botonCerrarSesion);
 
+    botonCerrarSesion.addEventListener("click", function () {
+        localStorage.removeItem("userLogged");
+        alert('Sesión cerrada');
+        window.location.reload();
+    });
+})
+
+
+
+
+//FUNCION PARA EL BUSCADOR
+// document.addEventListener('keyup', e => {
+//     if (e.target.matches('.form-control')) {
+//         document.querySelectorAll('.card-title').forEach(card => {
+//             card.textContent.toLowerCase().includes(e.target.value) 
+//             ? card.classList.remove('filtro')
+//             : card.classList.add('filtro')
+//         })
+//     }
+// })

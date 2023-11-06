@@ -83,3 +83,4 @@ function mostrarNuevosProductos() {
 
 const button = document.getElementById("formData").addEventListener("submit", datosIngresados);
 mostrarNuevosProductos();
+
