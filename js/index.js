@@ -1,4 +1,3 @@
-import productos from './arrayProductos.js';
 import navbar from '../componentes/navbar.js';
 import footer from '../componentes/footer.js';
 
@@ -6,7 +5,7 @@ document.addEventListener('DOMContentLoaded', navbar);
 document.addEventListener('DOMContentLoaded', footer);
 
 
-
+let productosLocalS = JSON.parse(localStorage.getItem('Productos'))
 const contenedorCards = document.querySelector('.contenedorCards');
 const botonesCategoria = document.querySelectorAll('.asideBotones');
 let botonesAgregar = document.querySelectorAll('.productoAgregar');
@@ -32,7 +31,7 @@ const insertarCategoria = (productosElegidos) => {
     actualizarBotones();
     
 }
-insertarCategoria(productos);
+insertarCategoria(productosLocalS);
 
 
 botonesCategoria.forEach(boton => {
@@ -43,10 +42,10 @@ botonesCategoria.forEach(boton => {
         e.currentTarget.classList.add('active');
 
         if (e.currentTarget.id !== 'todos') {
-            const productoBotonCategoria = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
+            const productoBotonCategoria = productosLocalS.filter(producto => producto.categoria === e.currentTarget.id);
             insertarCategoria(productoBotonCategoria);
         } else {
-            insertarCategoria(productos);
+            insertarCategoria(productosLocalS);
         }
         
 
@@ -75,7 +74,7 @@ if (productosCarritoLs) {
 
 function agregarAlCarrito (e) {
     let idBoton = e.currentTarget.id
-    const productoAgregado = productos.find(producto => producto.id === idBoton);
+    const productoAgregado = productosLocalS.find(producto => producto.id === idBoton);
     
     if(productosCarrito.some(producto => producto.id === idBoton)) {
         const index = productosCarrito.findIndex(producto => producto.id === idBoton);

@@ -5,10 +5,7 @@ const productos = [
         id: 'saco-01',
         precio: 100,
         stock: 20,
-        categoria: {
-            nombre:'trajes',
-            id:'sacos'
-        },
+        categoria:'sacos',
         imagen: '../img/sacos/saco 1.jpeg'
 
     },
@@ -17,10 +14,7 @@ const productos = [
         id: 'saco-02',
         precio: 100,
         stock: 20,
-        categoria: {
-            nombre:'trajes',
-            id:'sacos'
-        },
+        categoria:'sacos',
         imagen: '../img/sacos/saco 2.jpeg'
 
     },
@@ -29,10 +23,7 @@ const productos = [
         id: 'saco-03',
         precio: 100,
         stock: 20,
-        categoria: {
-            nombre:'trajes',
-            id:'sacos'
-        },
+        categoria:'sacos',
         imagen: '../img/sacos/saco 3.jpeg'
 
     },
@@ -41,10 +32,7 @@ const productos = [
         id: 'saco-04',
         precio: 100,
         stock: 20,
-        categoria: {
-            nombre:'trajes',
-            id:'sacos'
-        },
+        categoria:'sacos',
         imagen: '../img/sacos/saco 4.jpeg'
 
     },
@@ -54,10 +42,7 @@ const productos = [
         id: 'pantalon-01',
         precio: 100,
         stock: 20,
-        categoria: {
-            nombre:'trajes',
-            id:'pantalones'
-        },
+        categoria:'pantalones',
         imagen: '../img/pantalones/pantalon 1.jpeg'
 
     },
@@ -66,10 +51,7 @@ const productos = [
         id: 'pantalon-02',
         precio: 100,
         stock: 20,
-        categoria: {
-            nombre:'trajes',
-            id:'pantalones'
-        },
+        categoria:'pantalones',
         imagen: '../img/pantalones/pantalon 2.jpeg'
 
     },
@@ -78,10 +60,7 @@ const productos = [
         id: 'pantalon-03',
         precio: 100,
         stock: 20,
-        categoria: {
-            nombre:'trajes',
-            id:'pantalones'
-        },
+        categoria:'pantalones',
         imagen: '../img/pantalones/pantalon 3.jpeg'
 
     },
@@ -90,10 +69,7 @@ const productos = [
         id: 'pantalon-04',
         precio: 100,
         stock: 20,
-        categoria: {
-            nombre:'trajes',
-            id:'pantalones'
-        },
+        categoria:'pantalones',
         imagen: '../img/pantalones/pantalon 4.jpeg'
 
     },
@@ -103,10 +79,7 @@ const productos = [
         id: 'camisa-01',
         precio: 100,
         stock: 20,
-        categoria: {
-            nombre:'trajes',
-            id:'camisas'
-        },
+        categoria:'camisas',
         imagen: '../img/camisas/camisa 1.jpeg'
     },
     {
@@ -114,10 +87,7 @@ const productos = [
         id: 'camisa-02',
         precio: 100,
         stock: 20,
-        categoria: {
-            nombre:'trajes',
-            id:'camisas'
-        },
+        categoria:'camisas',
         imagen: '../img/camisas/camisa 2.jpeg'
     },
     {
@@ -125,10 +95,7 @@ const productos = [
         id: 'camisa-03',
         precio: 100,
         stock: 20,
-        categoria: {
-            nombre:'trajes',
-            id:'camisas'
-        },
+        categoria:'camisas',
         imagen: '../img/camisas/camisa 3.jpeg'
     },
     {
@@ -136,10 +103,7 @@ const productos = [
         id: 'camisa-04',
         precio: 100,
         stock: 20,
-        categoria: {
-            nombre:'trajes',
-            id:'camisas'
-        },
+        categoria: 'camisas',
         imagen: '../img/camisas/camisa 4.jpeg'
     }
     
