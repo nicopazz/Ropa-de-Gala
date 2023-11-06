@@ -58,7 +58,7 @@ function actualizarBotones (){
     botonesAgregar.forEach(boton => {
         boton.addEventListener('click', agregarAlCarrito)
     });
-}
+    }
 
 const productosCarritoLs = JSON.parse(localStorage.getItem('productosDelCarrito'));
 let productosCarrito;
@@ -83,15 +83,13 @@ function agregarAlCarrito (e) {
     }
     
     localStorage.setItem('productosDelCarrito', JSON.stringify(productosCarrito));
-
 } 
 
 
 
 //FUNCION PARA CERRAR SESION
 document.addEventListener('DOMContentLoaded', function (){
-    const botonCerrarSesion = document.getElementById('cerrarSesion')
-    console.log(botonCerrarSesion);
+    const botonCerrarSesion = document.getElementById('cerrarSesion');
 
     botonCerrarSesion.addEventListener("click", function () {
         localStorage.removeItem("userLogged");
@@ -104,12 +102,3 @@ document.addEventListener('DOMContentLoaded', function (){
 
 
 //FUNCION PARA EL BUSCADOR
-// document.addEventListener('keyup', e => {
-//     if (e.target.matches('.form-control')) {
-//         document.querySelectorAll('.card-title').forEach(card => {
-//             card.textContent.toLowerCase().includes(e.target.value) 
-//             ? card.classList.remove('filtro')
-//             : card.classList.add('filtro')
-//         })
-//     }
-// })
