@@ -1,3 +1,5 @@
+// import productos from '../js/arrayProductos.js';
+
 const header = document.querySelector('header');
 
 
@@ -8,7 +10,7 @@ const navbar = () => {
     <nav class="navbar navbar-expand-lg py-3 fixed-top border border-secondary navbar-dark" id="nav">
         <div class="container-fluid justify-content-end">
             <button class="navbar-toggler bg-black" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent">
-                <span><img id="botonHamburguesaHomero" src="./img/homero/que elegancia la de francia.jpeg" alt=""></span>
+                <span><img id="botonHamburguesaHomero" src="./img/homero/que elegancia la de francia.jpeg" alt="homero"></span>
             </button>
             <section class="offcanvas offcanvas-start bg-dark" id="navbarSupportedContent"    tabindex="-1">
                 <div class="offcanvas-header" data-bs-theme="dark">
@@ -18,22 +20,26 @@ const navbar = () => {
                 </div>
                 <div class="offcanvas-body d-flex flex-column px-0">
                     <ul class="navbar-nav fs-5 justify-content-end">
-                        <li class="nav-item p-3 py-md-1">
+                        <ol class="nav-item p-3 py-md-1">
                             <hr class=" ocultos " style="color: white;">
-                        </li>
+                        </ol>
                             <p class="textoCategoriaNav text-white text-center"> Categorías </p>
-                        <li id="todos"  class=" ocultos text-white asideBoton"><i class="bi bi-arrow-right-circle-fill"></i>
-                            Todos los productos
-                        </li>
-                        <li id="sacos" class=" ocultos text-white asideBoton"><i class="bi bi-arrow-right-circle-fill"></i>
-                            Sacos
-                        </li>
-                        <li id="pantalones" class=" ocultos text-white asideBoton"><i class="bi bi-arrow-right-circle-fill"></i>
-                            Pantalones
-                        </li>
-                        <li id="camisas" class=" ocultos text-white asideBoton"><i class="bi bi-arrow-right-circle-fill"></i>
-                            Camisas
-                        </li>
+
+                        <ol class=" ocultos text-white asideBotones">
+                            <button class="fw-bold asideBotones text-white" id="todos"><i class="bi bi-arrow-right-circle-fill me-1"></i>Todos los productos</button>
+                        </ol>
+
+                        <ol class=" ocultos text-white asideBotones">
+                            <button id="sacos" class="fw-bold asideBotones animate__animated animate__backInDown text-white"><i class="bi bi-arrow-right-circle-fill me-1"></i>Sacos</button>
+                        </ol>
+
+                        <ol class=" ocultos text-white asideBotones">
+                            <button id="pantalones" class="fw-bold asideBotones animate__animated animate__backInDown text-white"><i class="bi bi-arrow-right-circle-fill me-1"></i>Pantalones</button>
+                        </ol>
+
+                        <ol class=" ocultos text-white asideBotones">
+                        <button id="camisas" class="fw-bold asideBotones animate__animated animate__backInDown text-white"><i class="bi bi-arrow-right-circle-fill me-1"></i>Camisas</button>
+                        </ol>
                             <hr style="color: white;">
                         <li class="nav-item p-3 py-md-1 d-flex justify-content-around">
                                 
@@ -88,7 +94,6 @@ const navbar = () => {
                                     required
                                     maxlength="15"
                                     minlength="3"
-                                    
                                     />
                                     <button class="btn btn-outline-light fw-bold" type="submit">
                                         <i class="bi bi-search"></i>
@@ -112,24 +117,18 @@ const navbar = () => {
 
 
 
-// const botonesCategoria = document.querySelectorAll('.asideBoton');
-// console.log(botonesCategoria);
 
-// botonesCategoria.forEach(boton => {
-//     boton.addEventListener('click', (e) => {
-
-//         botonesCategoria.forEach(boton => boton.classList.remove('active'));
-
-//         e.currentTarget.classList.add('active');
-
-//         if (e.currentTarget.id !== 'todos') {
-//             const productoBotonCategoria = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
-//             insertarCategoria(productoBotonCategoria);
-//         } else {
-//             insertarCategoria(productos);
-//         }
-
-//     })
+//FUNCION PARA EL BUSCADOR
+const buscador = document.querySelector('.form-control')
+console.log(buscador);
+// document.addEventListener('keyup', e => {
+//     if (e.target.matches('.form-control')) {
+//         document.querySelectorAll('.card-title').forEach(card => {
+//             card.textContent.toLowerCase().includes(e.target.value) 
+//             ? card.classList.remove('filtro')
+//             : card.classList.add('filtro')
+//         })
+//     }
 // })
 
 export default navbar;
