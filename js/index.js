@@ -88,15 +88,15 @@ function agregarAlCarrito (e) {
 
 
 //FUNCION PARA CERRAR SESION
-document.addEventListener('DOMContentLoaded', function (){
-    const botonCerrarSesion = document.getElementById('cerrarSesion');
+// document.addEventListener('DOMContentLoaded', function (){
+//     const botonCerrarSesion = document.getElementById('cerrarSesion');
 
-    botonCerrarSesion.addEventListener("click", function () {
-        localStorage.removeItem("userLogged");
-        alert('Sesión cerrada');
-        window.location.reload();
-    });
-})
+//     botonCerrarSesion.addEventListener("click", function () {
+//         localStorage.removeItem("userLogged");
+//         alert('Sesión cerrada');
+//         window.location.reload();
+//     });
+// })
 
 
 
