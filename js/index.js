@@ -27,7 +27,7 @@ const insertarCategoria = (productosElegidos) => {
                 <button class="productoAgregar btn btn-success" id="${producto.id}">Agregar</button>
             </div>
 `;
-        contenedorCards.appendChild(div);
+    contenedorCards.appendChild(div);
     });
     actualizarBotones();
     
@@ -48,7 +48,7 @@ botonesCategoria.forEach(boton => {
         } else {
             insertarCategoria(productos);
         }
-        
+
 
     })
 })
@@ -61,8 +61,8 @@ function actualizarBotones (){
     botonesAgregar.forEach(boton => {
         boton.addEventListener('click', agregarAlCarrito)
     });
-    
-}
+
+    }
 
 const productosCarritoLs = JSON.parse(localStorage.getItem('productosDelCarrito'));
 let productosCarrito;
@@ -92,4 +92,18 @@ function agregarAlCarrito (e) {
 
 
 
+//FUNCION PARA CERRAR SESION
+document.addEventListener('DOMContentLoaded', function (){
+    const botonCerrarSesion = document.getElementById('cerrarSesion');
 
+    botonCerrarSesion.addEventListener("click", function () {
+        localStorage.removeItem("userLogged");
+        alert('Sesión cerrada');
+        window.location.reload();
+    });
+})
+
+
+
+
+//FUNCION PARA EL BUSCADOR
