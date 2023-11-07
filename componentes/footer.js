@@ -13,24 +13,24 @@ return ( contenedorFooter.innerHTML=
                 ><i class="bi bi-person-vcard"></i>
                 Sobre nosotros
                 </a>
-                <a class="mx-0 text-center" href="#"><i class="bi bi-people-fill"></i></i>Contáctanos
+                <a class="mx-0 text-center" href="../paginas/pagError.html"><i class="bi bi-people-fill"></i></i>Contáctanos
                 </a>
-                <a class="mx-0 text-center" href="#"><i class="bi bi-geo-alt-fill"></i>Locales
+                <a class="mx-0 text-center" href="../paginas/pagError.html"><i class="bi bi-geo-alt-fill"></i>Locales
                 </a>
-                <a class="mx-0 text-center" href="#"><i class="bi bi-credit-card"></i>Promociones bancarias
+                <a class="mx-0 text-center" href="../paginas/pagError.html"><i class="bi bi-credit-card"></i>Promociones bancarias
                 </a>
             </div>
             <div class="iconosFooter col-sm-4 my-sm-auto d-flex justify-content-evenly justify-content-sm-around mt-3">
-                <a href="#">
+                <a href="../paginas/pagError.html">
                     <i class="bi bi-facebook"></i>
                 </a>
-                <a href="#">
+                <a href="../paginas/pagError.html">
                     <i class="bi bi-instagram"></i>
                 </a>
-                <a href="#">
+                <a href="../paginas/pagError.html">
                     <i class="bi bi-twitter"></i>
                 </a>
-                <a href="#">
+                <a href="../paginas/pagError.html">
                     <i class="bi bi-youtube"></i>
                 </a>
             </div>
