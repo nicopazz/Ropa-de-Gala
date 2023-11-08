@@ -49,6 +49,7 @@ a {
     width: 3rem;
 }
 
+
 .contenedorAside {
     padding: 2rem;
     position: sticky;
@@ -86,9 +87,9 @@ a {
     color: white;
 }
 
-/* .locales, .promociones {
+.filto {
     display: none;
-} */
+}
 
 @media (max-width: 575px) {
     .contenedorAside {
@@ -134,7 +135,9 @@ a {
     .ocultos {
         visibility: hidden;
         position: absolute;
+        
     }
+    
 }
 
 @media (min-width: 991px) {
@@ -146,3 +149,4 @@ a {
         position: absolute;
     }
 }
+

@@ -6,11 +6,15 @@
   <title>Pagina de administrador</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/administrador.css">
+  <link rel="stylesheet" href="/css/index.css">
 </head>
 <body>
-  
-    <h1 class="text-center mt-5 fw-bold animate__animated animate__bounceInLeft">Pagina de administrador</h1>
-    
+  <header>
+        
+  </header>
+
+<body>
+
      <!-- Boton modal -->
       <div class="container mt-5 px-4">
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Modal">
@@ -21,9 +25,11 @@
     <!-- Modal -->
 <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
   <div class="modal-dialog">
-    <div class="modal-content">
+
+    <div class="modal-content" id="modalContent">
+
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="ModalLabel">Agregar nuevo producto</h1>
+        <h1 class="modal-title fs-5" id="ModalLabel"  >Agregar nuevo producto</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
 
@@ -40,9 +46,11 @@
               <label for="categoria" class="form-label">Categoria</label>
               <select class="form-select" aria-label="Default select example" id="categoria" >
                 <option value="" disabled selected >Seleccione una opcion</option>
-                <option value="sacos">Sacos</option>
-                <option value="pantalones">Pantalones</option>
-                <option value="camisas">Camisas</option>
+
+                <option value="Sacos">Sacos</option>
+                <option value="Pantalones">Pantalones</option>
+                <option value="Camisas">Camisas</option>
+
               </select>
             </div>
             <div class="mb-3">
@@ -59,7 +67,7 @@
             </div>
 
           <div class="modal-footer">
-            <button type="submit" class="btn btn-success" data-bs-dismiss="modal" >Agregar</button>
+            <button type="submit" class="btn btn-success" >Agregar</button>
           </div>
         </form>
         </div>
@@ -70,7 +78,9 @@
   
 <!-- Tabla de productos -->
 <div class="container mt-2" >
-  <table class="table" id="tableStyle">
+
+  <table class="table rounded-4" id="tableStyle">
+
       <thead>
         <tr>
           <th scope="col">Productos</th>
@@ -90,7 +100,7 @@
 </div>
   
   
-  <script type="module" src="/js/administrador.js"></script>
+  <script src="/js/administrador.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

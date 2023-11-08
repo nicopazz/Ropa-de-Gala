@@ -2,6 +2,7 @@ import productos from './arrayProductos.js';
 import navbar from '../componentes/navbar.js';
 import footer from '../componentes/footer.js';
 
+
 document.addEventListener('DOMContentLoaded', navbar);
 document.addEventListener('DOMContentLoaded', footer);
 
@@ -27,12 +28,13 @@ const insertarCategoria = (productosElegidos) => {
                 <button class="productoAgregar btn btn-success" id="${producto.id}">Agregar</button>
             </div>
 `;
-        contenedorCards.appendChild(div);
+    contenedorCards.appendChild(div);
     });
     actualizarBotones();
     
 }
 insertarCategoria(productos);
+
 
 
 botonesCategoria.forEach(boton => {
@@ -48,7 +50,7 @@ botonesCategoria.forEach(boton => {
         } else {
             insertarCategoria(productos);
         }
-        
+
 
     })
 })
@@ -61,8 +63,8 @@ function actualizarBotones (){
     botonesAgregar.forEach(boton => {
         boton.addEventListener('click', agregarAlCarrito)
     });
-    
-}
+
+    }
 
 const productosCarritoLs = JSON.parse(localStorage.getItem('productosDelCarrito'));
 let productosCarrito;
@@ -92,4 +94,18 @@ function agregarAlCarrito (e) {
 
 
 
+//FUNCION PARA CERRAR SESION
+document.addEventListener('DOMContentLoaded', function (){
+    const botonCerrarSesion = document.getElementById('cerrarSesion');
 
+    botonCerrarSesion.addEventListener("click", function () {
+        localStorage.removeItem("userLogged");
+        alert('Sesión cerrada');
+        window.location.reload();
+    });
+})
+
+
+
+
+//FUNCION PARA EL BUSCADOR
