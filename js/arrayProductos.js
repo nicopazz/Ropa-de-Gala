@@ -6,7 +6,7 @@ const productos = [
         precio: 100,
         stock: 20,
 
-        categoria: 'Sacos',
+        categoria: 'sacos',
         imagen: '../img/sacos/saco 1.jpeg',
         publicado: true
 
@@ -17,7 +17,7 @@ const productos = [
         precio: 100,
         stock: 20,
 
-        categoria: 'Sacos',
+        categoria: 'sacos',
         imagen: '../img/sacos/saco 2.jpeg',
         publicado: true
 
@@ -28,7 +28,7 @@ const productos = [
         precio: 100,
         stock: 20,
 
-        categoria: 'Sacos',
+        categoria: 'sacos',
         imagen: '../img/sacos/saco 3.jpeg',
         publicado: true
 
@@ -39,7 +39,7 @@ const productos = [
         precio: 100,
         stock: 20,
 
-        categoria: 'Sacos',
+        categoria: 'sacos',
         imagen: '../img/sacos/saco 4.jpeg',
         publicado: true
 
@@ -51,7 +51,7 @@ const productos = [
         precio: 100,
         stock: 20,
 
-        categoria: 'Pantalones',
+        categoria: 'pantalones',
         imagen: '../img/pantalones/pantalon 1.jpeg',
         publicado: true
 
@@ -62,7 +62,7 @@ const productos = [
         precio: 100,
         stock: 20,
 
-        categoria: 'Pantalones',
+        categoria: 'pantalones',
         imagen: '../img/pantalones/pantalon 2.jpeg',
         publicado: true
 
@@ -73,7 +73,7 @@ const productos = [
         precio: 100,
         stock: 20,
 
-        categoria: 'Pantalones',
+        categoria: 'pantalones',
         imagen: '../img/pantalones/pantalon 3.jpeg',
         publicado: true
 
@@ -84,7 +84,7 @@ const productos = [
         precio: 100,
         stock: 20,
 
-        categoria: 'Pantalones',
+        categoria: 'pantalones',
         imagen: '../img/pantalones/pantalon 4.jpeg',
         publicado: true
 
@@ -96,7 +96,7 @@ const productos = [
         precio: 100,
         stock: 20,
 
-        categoria: 'Camisas',
+        categoria: 'camisas',
         imagen: '../img/camisas/camisa 1.jpeg',
         publicado: true
 
@@ -107,7 +107,7 @@ const productos = [
         precio: 100,
         stock: 20,
 
-        categoria: 'Camisas',
+        categoria: 'camisas',
         imagen: '../img/camisas/camisa 2.jpeg',
         publicado: true
 
@@ -118,7 +118,7 @@ const productos = [
         precio: 100,
         stock: 20,
 
-        categoria: 'Camisas',
+        categoria: 'camisas',
         imagen: '../img/camisas/camisa 3.jpeg',
         publicado: true
 
@@ -129,7 +129,7 @@ const productos = [
         precio: 100,
         stock: 20,
 
-        categoria: 'Camisas',
+        categoria: 'camisas',
         imagen: '../img/camisas/camisa 4.jpeg',
         publicado: true
 
