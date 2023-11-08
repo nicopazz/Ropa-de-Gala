@@ -1,4 +1,4 @@
-import productos from './arrayProductos.js';
+
 import navbar from '../componentes/navbar.js';
 import footer from '../componentes/footer.js';
 
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', navbar);
 document.addEventListener('DOMContentLoaded', footer);
 
 
-
+const productosLocalS = JSON.parse(localStorage.getItem('Productos')) || [];
 const contenedorCards = document.querySelector('.contenedorCards');
 const botonesCategoria = document.querySelectorAll('.asideBotones');
 let botonesAgregar = document.querySelectorAll('.productoAgregar');
@@ -33,7 +33,7 @@ const insertarCategoria = (productosElegidos) => {
     actualizarBotones();
     
 }
-insertarCategoria(productos);
+insertarCategoria(productosLocalS);
 
 
 
@@ -45,10 +45,10 @@ botonesCategoria.forEach(boton => {
         e.currentTarget.classList.add('active');
 
         if (e.currentTarget.id !== 'todos') {
-            const productoBotonCategoria = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
+            const productoBotonCategoria = productosLocalS.filter(producto => producto.categoria === e.currentTarget.id);
             insertarCategoria(productoBotonCategoria);
         } else {
-            insertarCategoria(productos);
+            insertarCategoria(productosLocalS);
         }
 
 
@@ -101,19 +101,19 @@ btnBuscador.addEventListener('click', buscar)
 
 function buscar (e){
     e.preventDefault()
-    let buscador = document.getElementById('inputBuscador').value.toLowerCase();
+    let buscador = document.getElementById('inputBuscador').value;
 
     if (buscador === 'camisas', 'camisa') {
-        let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador);
-        insertarCategoria(buscadorCategorias);
+        let buscador1 = productosLocalS.filter(producto => producto.categoria === buscador);
+        insertarCategoria(buscador1);
 
     } if (buscador === 'pantalones', 'pantalon') {
-        let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador);
-        insertarCategoria(buscadorCategorias);
+        let buscador2 = productosLocalS.filter(producto => producto.categoria === buscador);
+        insertarCategoria(buscador2);
 
     } if (buscador === 'sacos', 'saco') {
-        let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador);
-        insertarCategoria(buscadorCategorias);
+        let buscador3 = productosLocalS.filter(producto => producto.categoria === buscador);
+        insertarCategoria(buscador3);
     } else {
         alert('no hay coincidencia con su búsqueda');
     }

@@ -10,10 +10,8 @@
 </head>
 <body>
   <header>
-        
+      
   </header>
-
-<body>
 
      <!-- Boton modal -->
       <div class="container mt-5 px-4">
@@ -23,82 +21,82 @@
        </div>
     
     <!-- Modal -->
-<div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
 
-    <div class="modal-content" id="modalContent">
+      <div class="modal-content" id="modalContent">
 
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="ModalLabel"  >Agregar nuevo producto</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="ModalLabel"  >Agregar nuevo producto</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
 
-      <div class="modal-body">
-        <div class="container col-8">
+        <div class="modal-body">
+          <div class="container col-8">
 
-          <!-- Formulario para agregar nuevo producto -->
-          <form id="formData">
-            <div class="mb-3">
-              <label for="nuevoProducto" class="form-label">Producto</label>
-              <input type="text" class="form-control" id="nuevoProducto">
+            <!-- Formulario para agregar nuevo producto -->
+            <form id="formData">
+              <div class="mb-3">
+                <label for="nuevoProducto" class="form-label">Producto</label>
+                <input type="text" class="form-control" id="nuevoProducto">
+              </div>
+              <div class="mb-3">
+                <label for="categoria" class="form-label">Categoria</label>
+                <select class="form-select" aria-label="Default select example" id="categoria" >
+                  <option value="" disabled selected >Seleccione una opcion</option>
+
+                  <option value="sacos">Sacos</option>
+                  <option value="santalones">Pantalones</option>
+                  <option value="camisas">Camisas</option>
+
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="precio" class="form-label">Precio</label>
+                <input type="text" class="form-control" id="precio">
+              </div>
+              <div class="mb-3">
+                <label for="stock" class="form-label">Stock</label>
+                <input type="text" class="form-control" id="stock">
+              </div>
+              <div class="mb-3">
+                <label for="imagen" class="form-label">Imagen</label>
+                <input type="url" class="form-control" id="imagen">
+              </div>
+
+            <div class="modal-footer">
+              <button type="submit" class="btn btn-success" >Agregar</button>
             </div>
-            <div class="mb-3">
-              <label for="categoria" class="form-label">Categoria</label>
-              <select class="form-select" aria-label="Default select example" id="categoria" >
-                <option value="" disabled selected >Seleccione una opcion</option>
-
-                <option value="Sacos">Sacos</option>
-                <option value="Pantalones">Pantalones</option>
-                <option value="Camisas">Camisas</option>
-
-              </select>
-            </div>
-            <div class="mb-3">
-              <label for="precio" class="form-label">Precio</label>
-              <input type="text" class="form-control" id="precio">
-            </div>
-            <div class="mb-3">
-              <label for="stock" class="form-label">Stock</label>
-              <input type="text" class="form-control" id="stock">
-            </div>
-            <div class="mb-3">
-              <label for="imagen" class="form-label">Imagen</label>
-              <input type="url" class="form-control" id="imagen">
-            </div>
-
-          <div class="modal-footer">
-            <button type="submit" class="btn btn-success" >Agregar</button>
+          </form>
           </div>
-        </form>
         </div>
       </div>
     </div>
   </div>
-</div>
   
-<!-- Tabla de productos -->
-<div class="container mt-2" >
+  <!-- Tabla de productos -->
+  <div class="container mt-2" >
 
-  <table class="table rounded-4" id="tableStyle">
+      <table class="table rounded-4" id="tableStyle">
 
-      <thead>
-        <tr>
-          <th scope="col">Productos</th>
-          <th scope="col">Categoria</th>
-          <th scope="col">Precio</th>
-          <th scope="col">Stock</th>
-          <th scope="col">Imagen</th>
-          <th scope="col">Publicado</th>
-          <th scope="col">Acción</th>
-        </tr>
-      </thead>
-      <tbody>
-       
-      
-      </tbody>
-  </table>
-</div>
-  
+          <thead>
+            <tr>
+              <th scope="col">Productos</th>
+              <th scope="col">Categoria</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Stock</th>
+              <th scope="col">Imagen</th>
+              <th scope="col">Publicado</th>
+              <th scope="col">Acción</th>
+            </tr>
+          </thead>
+          <tbody>
+          
+          
+          </tbody>
+      </table>
+  </div>
+
   
   <script src="/js/administrador.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
