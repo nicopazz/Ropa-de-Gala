@@ -23,7 +23,7 @@ const insertarCategoria = (productosElegidos) => {
             <div class="card-body">
                 <h5 class="card-title">${producto.titulo}</h5>
                 <p class="card-text">$${producto.precio}</p>
-                <button class="productoAgregar btn btn-success" id="${producto.id}">Agregar</button>
+                <button class="productoAgregar btn btn-success" id="${producto.titulo}">Agregar</button>
             </div>
 `;
     contenedorCards.appendChild(div);
@@ -71,10 +71,11 @@ if (productosCarritoLs) {
 
 function agregarAlCarrito (e) {
     let idBoton = e.currentTarget.id
-    const productoAgregado = productosLocalS.find(producto => producto.id === idBoton);
+    const productoAgregado = productosLocalS.find(producto => producto.titulo === idBoton);
+    console.log(productoAgregado);
     
-    if(productosCarrito.some(producto => producto.id === idBoton)) {
-        const index = productosCarrito.findIndex(producto => producto.id === idBoton);
+    if(productosCarrito.some(producto => producto.titulo === idBoton)) {
+        const index = productosCarrito.findIndex(producto => producto.titulo === idBoton);
         productosCarrito[index].cantidad++;
 
     } else{
@@ -102,3 +103,53 @@ function agregarAlCarrito (e) {
 
 
 //FUNCION PARA EL BUSCADOR
+// const buscador = document.getElementById('inputBuscador');
+// console.log(buscador);
+// document.addEventListener('keyup', e => {
+//     if (e.target.matches('#inputBuscador')) {
+//         document.querySelectorAll('.card-title').forEach(card => {
+//             card.textContent.toLowerCase().includes(e.target.value.toLowerCase()) 
+//             ? card.classList.remove('filtro') 
+//             : card.classList.add('filtro')
+//         })
+//     }
+// })
+
+const btnBuscador = document.getElementById('botonBuscador');
+btnBuscador.addEventListener('click', buscar)
+
+function buscar (e){
+    e.preventDefault()
+    let buscador = document.getElementById('inputBuscador').value.toLowerCase();
+
+    if (buscador === 'camisas', 'camisa') {
+        let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador)
+        
+        insertarCategoria(buscadorCategorias)
+
+    } if (buscador === 'pantalones', 'pantalon') {
+        
+    } if (buscador === 'sacos', 'saco') {
+        
+    }
+    }
+
+
+// const productoBotonCategoria = productosLocalS.filter(producto => producto.categoria === e.currentTarget.id);
+//  console.log(productosLocalS);
+
+// botonesCategoria.forEach(boton => {
+//     boton.addEventListener('click', (e) => {
+
+//         botonesCategoria.forEach(boton => boton.classList.remove('active'));
+
+//         e.currentTarget.classList.add('active');
+
+//         if (e.currentTarget.id !== 'todos') {
+//             const productoBotonCategoria = productosLocalS.filter(producto => producto.categoria === e.currentTarget.id);
+//             insertarCategoria(productoBotonCategoria);
+//         } else {
+//             insertarCategoria(productosLocalS);
+//         }
+//     })
+// })

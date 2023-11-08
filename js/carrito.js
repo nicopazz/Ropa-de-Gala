@@ -79,7 +79,7 @@ function eliminarDelCarrito (e){
     productosLs.splice(index, 1);
     cargarProductosCarrito();
     localStorage.setItem('productosDelCarrito', JSON.stringify(productosLs));
-    // window.location.reload();
+    window.location.reload();
 }
 
 botonVaciarCarrito.addEventListener('click', vaciarCarrito)

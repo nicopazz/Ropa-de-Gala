@@ -82,22 +82,7 @@ const navbar = () => {
                             </button>
                             </a>
                         </li>
-                        <li id="search-login">
-                            <form id="buscador" class="d-flex animate__animated animate__backInDown">
-                                    <input id="inputBuscador"
-                                    class=" me-2"
-                                    type="search"
-                                    placeholder="¿Que busca?"
-                                    aria-label="Buscar"
-                                    required
-                                    maxlength="15"
-                                    minlength="3"
-                                    />
-                                    <button class="btn btn-outline-light fw-bold" type="submit">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                            </form>
-                        </li>
+
                         <li class="nav-item p-3 py-md-1 ml-5" id="search-login">
                                 <a class="ms-4" href="/pages/login.html">
                                     <i class="fa-solid fa-user fa-xl" style="color: #ffffff"></i>
@@ -111,21 +96,6 @@ const navbar = () => {
     `)
     
 }
-
-
-//FUNCION PARA EL BUSCADOR
-const buscador = document.getElementById('inputBuscador')
-console.log(buscador);
-document.addEventListener('keyup', e => {
-    if (e.target.matches('.form-control')) {
-        document.querySelectorAll('.card-title').forEach(card => {
-            card.textContent.toLowerCase().includes(e.target.value) 
-            ? card.classList.remove('filtro')
-            : card.classList.add('filtro')
-        })
-    }
-})
-
 
 export default navbar;
 
