@@ -126,5 +126,4 @@ function buscar (e){
 
 
 
-        // if (e.key == 'Escape')e.target.value = ''
 
