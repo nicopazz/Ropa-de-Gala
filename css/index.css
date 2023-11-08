@@ -33,9 +33,9 @@ a {
 
 }
 
-#buscador {
+/* #buscador {
     width: 80%;
-}
+} */
 
 #botonHamburguesaHomero{
     width: 2rem;
@@ -49,6 +49,13 @@ a {
     width: 3rem;
 }
 
+/* #contendorBuscador {
+    margin-top: 100px;
+} */
+
+/* #buscador {
+    margin: auto;
+} */
 
 .contenedorAside {
     padding: 2rem;

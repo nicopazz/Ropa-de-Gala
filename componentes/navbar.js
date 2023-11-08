@@ -1,5 +1,3 @@
-// import productos from '../js/arrayProductos.js';
-
 const header = document.querySelector('header');
 
 
@@ -10,7 +8,7 @@ const navbar = () => {
     <nav class="navbar navbar-expand-lg py-3 fixed-top border border-secondary navbar-dark" id="nav">
         <div class="container-fluid justify-content-end">
             <button class="navbar-toggler bg-black" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarSupportedContent">
-                <span><img id="botonHamburguesaHomero" src="./img/homero/que elegancia la de francia.jpeg" alt="homero"></span>
+                <span><img id="botonHamburguesaHomero" src="../img/homero/que elegancia la de francia.jpeg" alt="homero"></span>
             </button>
             <section class="offcanvas offcanvas-start bg-dark" id="navbarSupportedContent"    tabindex="-1">
                 <div class="offcanvas-header" data-bs-theme="dark">
@@ -84,22 +82,7 @@ const navbar = () => {
                             </button>
                             </a>
                         </li>
-                        <li id="search-login">
-                            <form id="buscador" class="d-flex animate__animated animate__backInDown">
-                                    <input
-                                    class="form-control me-2"
-                                    type="search"
-                                    placeholder="¿Que busca?"
-                                    aria-label="Buscar"
-                                    required
-                                    maxlength="15"
-                                    minlength="3"
-                                    />
-                                    <button class="btn btn-outline-light fw-bold" type="submit">
-                                        <i class="bi bi-search"></i>
-                                    </button>
-                            </form>
-                        </li>
+
                         <li class="nav-item p-3 py-md-1 ml-5" id="search-login">
                                 <a class="ms-4" href="/pages/login.html">
                                     <i class="fa-solid fa-user fa-xl" style="color: #ffffff"></i>
@@ -114,22 +97,17 @@ const navbar = () => {
     
 }
 
-
-
-
-
-//FUNCION PARA EL BUSCADOR
-const buscador = document.querySelector('.form-control')
-console.log(buscador);
-// document.addEventListener('keyup', e => {
-//     if (e.target.matches('.form-control')) {
-//         document.querySelectorAll('.card-title').forEach(card => {
-//             card.textContent.toLowerCase().includes(e.target.value) 
-//             ? card.classList.remove('filtro')
-//             : card.classList.add('filtro')
-//         })
-//     }
-// })
-
 export default navbar;
+
+
+
+
+
+
+
+
+
+
+
+
 

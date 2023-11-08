@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', footer);
 
 
 const productosLs = JSON.parse(localStorage.getItem('productosDelCarrito'));
-console.log(productosLs);
+// console.log(productosLs);
 const contenedorCarritoDiv = document.getElementById('contenedorCarrito');
 const contenedorProducto = document.getElementById('contenedorProducto')
 const textoCarritoVacio = document.querySelector('.textoCarritoVacio');
@@ -22,8 +22,7 @@ const comprafinalizada = document.getElementById('compraFinalizada');
 function cargarProductosCarrito() {
     if (productosLs && productosLs.length > 0) {
         textoCarritoVacio.classList.add('visually-hidden');
-        // contenedorProducto.classList.remove('disabled');
-        
+
         productosLs.forEach(producto => {
             const div = document.createElement('div');
             div.classList.add("d-flex","justify-content-between", 'animate__animated', 'animate__fadeIn');

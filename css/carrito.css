@@ -20,6 +20,7 @@
 
 #volverAlInicio{
     text-decoration: none;
+
 }
 
 #total {
@@ -94,5 +95,11 @@
 @media (min-width: 576px){
     .botonInicioFin{
         display: none;
+    }
+}
+
+@media (max-width: 575px){
+    .botonInicioFin{
+        margin-bottom: 100%;
     }
 }
