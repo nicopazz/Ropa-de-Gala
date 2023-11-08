@@ -1,5 +1,6 @@
 
 
+
 const arrNuevosProductos = JSON.parse(localStorage.getItem("Productos")) || [];
 
 const datosIngresados = (e) => {
@@ -54,7 +55,9 @@ function editar (id) {
 }
 
 
+
 arrNuevosProductos.forEach(producto => {
+
       const productRow = document.createElement('tr');
       productRow.classList.add('rowTable');
       let inputCheck = '';
@@ -125,9 +128,6 @@ arrNuevosProductos.forEach(producto => {
 });
 
 
-
-
-
 function clear() {
   document.getElementById("nuevoProducto").value = "";
   document.getElementById("categoria").value = "";
@@ -135,12 +135,5 @@ function clear() {
   document.getElementById("stock").value = "";
   document.getElementById("imagen").value = "";
 }
-
-
-
-
-
-
-
 
 

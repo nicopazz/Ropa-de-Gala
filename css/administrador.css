@@ -1,8 +1,8 @@
-
 #tableStyle {
   
   --bs-table-bg: null;
   background-color: rgb(203, 208, 249);
+
   vertical-align: middle;
   --bs-table-border-color: rgb(66, 80, 190);
 }
@@ -18,3 +18,4 @@
 .ModalLabel{
   color: black;
 }
+
