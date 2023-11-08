@@ -1,11 +1,13 @@
+import productos from './arrayProductos.js';
 import navbar from '../componentes/navbar.js';
 import footer from '../componentes/footer.js';
+
 
 document.addEventListener('DOMContentLoaded', navbar);
 document.addEventListener('DOMContentLoaded', footer);
 
 
-let productosLocalS = JSON.parse(localStorage.getItem('Productos'))
+
 const contenedorCards = document.querySelector('.contenedorCards');
 const botonesCategoria = document.querySelectorAll('.asideBotones');
 let botonesAgregar = document.querySelectorAll('.productoAgregar');
@@ -31,7 +33,8 @@ const insertarCategoria = (productosElegidos) => {
     actualizarBotones();
     
 }
-insertarCategoria(productosLocalS);
+insertarCategoria(productos);
+
 
 
 botonesCategoria.forEach(boton => {
@@ -42,11 +45,13 @@ botonesCategoria.forEach(boton => {
         e.currentTarget.classList.add('active');
 
         if (e.currentTarget.id !== 'todos') {
-            const productoBotonCategoria = productosLocalS.filter(producto => producto.categoria === e.currentTarget.id);
+            const productoBotonCategoria = productos.filter(producto => producto.categoria.id === e.currentTarget.id);
             insertarCategoria(productoBotonCategoria);
         } else {
-            insertarCategoria(productosLocalS);
+            insertarCategoria(productos);
         }
+
+
     })
 })
 
@@ -58,6 +63,7 @@ function actualizarBotones (){
     botonesAgregar.forEach(boton => {
         boton.addEventListener('click', agregarAlCarrito)
     });
+
     }
 
 const productosCarritoLs = JSON.parse(localStorage.getItem('productosDelCarrito'));
@@ -73,6 +79,7 @@ function agregarAlCarrito (e) {
     let idBoton = e.currentTarget.id
     const productoAgregado = productosLocalS.find(producto => producto.titulo === idBoton);
     console.log(productoAgregado);
+
     
     if(productosCarrito.some(producto => producto.titulo === idBoton)) {
         const index = productosCarrito.findIndex(producto => producto.titulo === idBoton);
@@ -84,6 +91,7 @@ function agregarAlCarrito (e) {
     }
     
     localStorage.setItem('productosDelCarrito', JSON.stringify(productosCarrito));
+
 } 
 
 
