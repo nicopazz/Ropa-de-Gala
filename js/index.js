@@ -103,27 +103,24 @@ function buscar (e){
     e.preventDefault()
 
     let buscador = document.getElementById('inputBuscador').value.toLowerCase();
-    
-    if (buscador === 'camisas', 'camisa') {
+
+    if (buscador) {
 
         let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador); 
 
-        return insertarCategoria(buscadorCategorias);
-
-    } if (buscador === 'pantalones', 'pantalon') {
-        let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador);
-        return insertarCategoria(buscadorCategorias);
-
-    } if (buscador === 'sacos', 'saco') {
-        let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador);
-        return insertarCategoria(buscadorCategorias);
+        insertarCategoria(buscadorCategorias);
 
     } else {
-        return alert('no hay coincidencia con su búsqueda');
+        insertarCategoria(productosLocalS);
     }
     }
+    // if (buscador === 'pantalones', 'pantalon') {
+    //     let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador);
+    //     insertarCategoria(buscadorCategorias);
 
-
-
-
+    // } if (buscador === 'sacos', 'saco') {
+    //     let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador);
+    //     insertarCategoria(buscadorCategorias);
+    // } 
+    
 
