@@ -87,34 +87,7 @@ function agregarAlCarrito (e) {
 } 
 
 
-
-//FUNCION PARA CERRAR SESION
-// document.addEventListener('DOMContentLoaded', function (){
-//     const botonCerrarSesion = document.getElementById('cerrarSesion');
-
-//     botonCerrarSesion.addEventListener("click", function () {
-//         localStorage.removeItem("userLogged");
-//         alert('Sesión cerrada');
-//         window.location.reload();
-//     });
-// })
-
-
-
-
-//FUNCION PARA EL BUSCADOR
-// const buscador = document.getElementById('inputBuscador');
-// console.log(buscador);
-// document.addEventListener('keyup', e => {
-//     if (e.target.matches('#inputBuscador')) {
-//         document.querySelectorAll('.card-title').forEach(card => {
-//             card.textContent.toLowerCase().includes(e.target.value.toLowerCase()) 
-//             ? card.classList.remove('filtro') 
-//             : card.classList.add('filtro')
-//         })
-//     }
-// })
-
+//FUNCION PARA EL BUSCADOR DE PRODUCTOS....
 const btnBuscador = document.getElementById('botonBuscador');
 btnBuscador.addEventListener('click', buscar)
 
@@ -123,33 +96,18 @@ function buscar (e){
     let buscador = document.getElementById('inputBuscador').value.toLowerCase();
 
     if (buscador === 'camisas', 'camisa') {
-        let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador)
-        
-        insertarCategoria(buscadorCategorias)
+        let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador);
+        insertarCategoria(buscadorCategorias);
 
     } if (buscador === 'pantalones', 'pantalon') {
-        
+        let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador);
+        insertarCategoria(buscadorCategorias);
+
     } if (buscador === 'sacos', 'saco') {
-        
+        let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador);
+        insertarCategoria(buscadorCategorias);
+    } else {
+        alert('no hay coincidencia con su búsqueda');
     }
     }
 
-
-// const productoBotonCategoria = productosLocalS.filter(producto => producto.categoria === e.currentTarget.id);
-//  console.log(productosLocalS);
-
-// botonesCategoria.forEach(boton => {
-//     boton.addEventListener('click', (e) => {
-
-//         botonesCategoria.forEach(boton => boton.classList.remove('active'));
-
-//         e.currentTarget.classList.add('active');
-
-//         if (e.currentTarget.id !== 'todos') {
-//             const productoBotonCategoria = productosLocalS.filter(producto => producto.categoria === e.currentTarget.id);
-//             insertarCategoria(productoBotonCategoria);
-//         } else {
-//             insertarCategoria(productosLocalS);
-//         }
-//     })
-// })
