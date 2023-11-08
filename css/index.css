@@ -76,6 +76,16 @@ a {
     border-bottom-left-radius: 1rem;
     width: 100%;
 }
+
+.botonesCanvas {
+    background-color: transparent;
+    border: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: black;
+    
+}
+
 .active{
     background-color: rgb(203, 208, 249);
     width: 100%;
