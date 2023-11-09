@@ -119,9 +119,20 @@ const navbar = () => {
 
 // }
 
+navbar();
 
+//FUNCION PARA CERRAR SESION
+document.addEventListener('DOMContentLoaded', function (){
+    const botonCerrarSesion = document.getElementById('cerrarSesion');
 
-export default navbar;
+    botonCerrarSesion.addEventListener("click", function () {
+        localStorage.removeItem("userLogged");
+        alert('Sesión cerrada');
+        window.location.reload();
+    });
+})
+
+// export default navbar;
 
 
 

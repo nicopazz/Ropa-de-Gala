@@ -1,10 +1,10 @@
 
-import navbar from '../componentes/navbar.js';
-import footer from '../componentes/footer.js';
+// import navbar from '../componentes/navbar.js';
+// import footer from '../componentes/footer.js';
 
 
-document.addEventListener('DOMContentLoaded', navbar);
-document.addEventListener('DOMContentLoaded', footer);
+// document.addEventListener('DOMContentLoaded', navbar);
+// document.addEventListener('DOMContentLoaded', footer);
 
 
 const productosLocalS = JSON.parse(localStorage.getItem('Productos')) || [];
@@ -93,6 +93,7 @@ function agregarAlCarrito (e) {
     localStorage.setItem('productosDelCarrito', JSON.stringify(productosCarrito));
 
 } 
+
 
 
 //FUNCION PARA EL BUSCADOR DE PRODUCTOS....

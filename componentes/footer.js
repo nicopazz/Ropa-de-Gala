@@ -41,4 +41,6 @@ return ( contenedorFooter.innerHTML=
 
 }
 
-export default footer;
+footer();
+
+// export default footer;
