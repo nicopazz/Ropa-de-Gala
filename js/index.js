@@ -15,12 +15,14 @@ const insertarCategoria = (productosElegidos) => {
         div.style = "width: 12rem";
         div.innerHTML = `
             <img src="${producto.imagen}" class="card-img-top" alt="${producto.titulo}">
+            </a>        
             <div class="card-body">
                 <h5 class="card-title">${producto.titulo}</h5>
                 <p class="card-text">$${producto.precio}</p>
                 <button class="productoAgregar btn btn-success" id="${producto.titulo}">Agregar</button>
+                <button class="btn mt-2 btn-success"id="${producto.titulo}"><a href="./paginas/detalle.html?id=${producto.id}">Detalles</a></button>
             </div>
-`;
+`;     
     contenedorCards.appendChild(div);
     });
     actualizarBotones();
