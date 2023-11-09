@@ -9,7 +9,7 @@ return ( contenedorFooter.innerHTML=
                 <h4>Rolling Shop</h4>
             </div>
             <div class="infoFooter d-flex flex-column col-sm-4 my-auto">
-                <a class="mx-0 text-center" href="#"
+                <a class="mx-0 text-center" href="../paginas/acercaDeNosotros.html"
                 ><i class="bi bi-person-vcard"></i>
                 Sobre nosotros
                 </a>
@@ -41,4 +41,6 @@ return ( contenedorFooter.innerHTML=
 
 }
 
-export default footer;
+footer();
+
+// export default footer;

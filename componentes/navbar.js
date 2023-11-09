@@ -1,9 +1,11 @@
 const header = document.querySelector('header');
 
 
+
 const navbar = () => {
     const user = JSON.parse(localStorage.getItem('userLogged'))|| undefined;
     // console.log(user[0].username);
+    
     return (header.innerHTML = `
     <nav class="navbar navbar-expand-lg py-3 fixed-top border border-secondary navbar-dark" id="nav">
         <div class="container-fluid justify-content-end">
@@ -23,20 +25,22 @@ const navbar = () => {
                         </ol>
                             <p class="textoCategoriaNav text-white text-center"> Categorías </p>
 
-                        <ol class=" ocultos text-white asideBotones">
-                            <button class="fw-bold asideBotones text-white" id="todos"><i class="bi bi-arrow-right-circle-fill me-1"></i>Todos los productos</button>
+                        <ol class=" ocultos text-white botonesCanvasOl">
+                            <button class="fw-bold botonesCanvas text-white" id="todos"><i class="bi bi-arrow-right-circle-fill me-1"></i>Todos los productos</button>
                         </ol>
 
-                        <ol class=" ocultos text-white asideBotones">
-                            <button id="sacos" class="fw-bold asideBotones animate__animated animate__backInDown text-white"><i class="bi bi-arrow-right-circle-fill me-1"></i>Sacos</button>
+                        <ol class=" ocultos text-white botonesCanvasOl">
+                            <button id="sacos" class="fw-bold botonesCanvas animate__animated animate__backInDown text-white"><i class="bi bi-arrow-right-circle-fill me-1"></i>Sacos</button>
                         </ol>
 
-                        <ol class=" ocultos text-white asideBotones">
-                            <button id="pantalones" class="fw-bold asideBotones animate__animated animate__backInDown text-white"><i class="bi bi-arrow-right-circle-fill me-1"></i>Pantalones</button>
+                        <ol class=" ocultos text-white botonesCanvasOl">
+                            <button id="pantalones" class="fw-bold botonesCanvas animate__animated animate__backInDown text-white"><i class="bi bi-arrow-right-circle-fill me-1"></i>Pantalones</button>
                         </ol>
 
-                        <ol class=" ocultos text-white asideBotones">
-                        <button id="camisas" class="fw-bold asideBotones animate__animated animate__backInDown text-white"><i class="bi bi-arrow-right-circle-fill me-1"></i>Camisas</button>
+                        <ol class=" ocultos text-white botonesCanvasOl">
+                            <a href="./index.html">
+                                <button id="camisas" class="fw-bold botonesCanvas animate__animated animate__backInDown text-white"><i class="bi bi-arrow-right-circle-fill me-1"></i>Camisas</button>
+                            </a>
                         </ol>
                             <hr style="color: white;">
                         <li class="nav-item p-3 py-md-1 d-flex justify-content-around">
@@ -49,18 +53,18 @@ const navbar = () => {
                                     
                                     ` 
                                     : `
-                                    <a href="./paginas/login.html">
-                                    <button 
-                                    type="button" 
-                                    class="btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown"><i class="bi bi-person-fill me-3" ></i>
-                                    Ingresar
-                                    </button>
+                                    <a href="../paginas/login.html">
+                                        <button 
+                                        type="button" 
+                                        class="btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown"><i class="bi bi-person-fill me-3" ></i>
+                                        Ingresar
+                                        </button>
                                     </a>
-                                    <a href="./paginas/signup.html">
-                                    <button 
-                                    type="button" 
-                                    class="registroNav btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown">
-                                    Registrate
+                                    <a href="../paginas/signup.html">
+                                        <button 
+                                        type="button" 
+                                        class="registroNav btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown">
+                                        Registrate
                                     </button>
                                     </a>
                                     `
@@ -97,7 +101,38 @@ const navbar = () => {
     
 }
 
-export default navbar;
+
+//tratndo de hacer que funcionen los botones laterales del canvas
+// function botonesLaterales (){
+//     const botonesCanvas = document.querySelectorAll('.botonesCanvas');
+
+//     botonesCanvas.forEach(boton => {
+//         boton.addEventListener('click', (e) => {
+//             if (e.currentTarget.id !== 'todos') {
+//                 const productoBotonCategoria = productosLocalS.filter(producto => producto.categoria === e.currentTarget.id);
+//                 insertarCategoria(productoBotonCategoria);
+//             } else {
+//                 insertarCategoria(productosLocalS);
+//             }
+//         })
+//     })
+
+// }
+
+navbar();
+
+//FUNCION PARA CERRAR SESION
+document.addEventListener('DOMContentLoaded', function (){
+    const botonCerrarSesion = document.getElementById('cerrarSesion');
+
+    botonCerrarSesion.addEventListener("click", function () {
+        localStorage.removeItem("userLogged");
+        alert('Sesión cerrada');
+        window.location.reload();
+    });
+})
+
+// export default navbar;
 
 
 
