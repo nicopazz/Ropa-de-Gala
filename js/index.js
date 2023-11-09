@@ -1,11 +1,3 @@
-/*
-import navbar from '../componentes/navbar.js';
-import footer from '../componentes/footer.js';
-
-
-document.addEventListener('DOMContentLoaded', navbar);
-document.addEventListener('DOMContentLoaded', footer);
-*/
 
 const productosLocalS = JSON.parse(localStorage.getItem('Productos')) || [];
 const contenedorCards = document.querySelector('.contenedorCards');
@@ -102,21 +94,26 @@ btnBuscador.addEventListener('click', buscar)
 
 function buscar (e){
     e.preventDefault()
-    let buscador = document.getElementById('inputBuscador').value;
 
-    if (buscador === 'camisas', 'camisa') {
-        let buscador1 = productosLocalS.filter(producto => producto.categoria === buscador);
-        insertarCategoria(buscador1);
 
-    } if (buscador === 'pantalones', 'pantalon') {
-        let buscador2 = productosLocalS.filter(producto => producto.categoria === buscador);
-        insertarCategoria(buscador2);
+    let buscador = document.getElementById('inputBuscador').value.toLowerCase();
 
-    } if (buscador === 'sacos', 'saco') {
-        let buscador3 = productosLocalS.filter(producto => producto.categoria === buscador);
-        insertarCategoria(buscador3);
+    if (buscador) {
+
+        let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador); 
+
+        insertarCategoria(buscadorCategorias);
     } else {
-        alert('no hay coincidencia con su búsqueda');
+        insertarCategoria(productosLocalS);
     }
     }
+    // if (buscador === 'pantalones', 'pantalon') {
+    //     let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador);
+    //     insertarCategoria(buscadorCategorias);
+
+    // } if (buscador === 'sacos', 'saco') {
+    //     let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador);
+    //     insertarCategoria(buscadorCategorias);
+    // } 
+    
 
