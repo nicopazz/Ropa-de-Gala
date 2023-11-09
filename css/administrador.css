@@ -1,14 +1,58 @@
+*{
+    margin: 0;
+}
+
+body {
+  background-color: rgb(66, 80, 190); 
+}
+
+main{
+  padding-top: 5%;
+}
+
+footer{
+  background-color: rgb(68, 74, 112);
+  color: white;
+  
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+#nav {
+  background-color: rgb(68, 74, 112);
+}
+
+
 #tableStyle {
   
   --bs-table-bg: null;
   background-color: rgb(203, 208, 249);
-
   vertical-align: middle;
   --bs-table-border-color: rgb(66, 80, 190);
 }
 
+
+.card{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: rgb(66, 80, 190);
+  border: 1px solid rgb(66, 80, 190);
+  border-top-right-radius: 5%;
+  border-top-left-radius: 5%;
+  color: white;
+}
+
+
 #modalContent {
-  background-color: rgb(203, 208, 249);
+  background-color: rgb(163, 169, 215);
+}
+
+#modalEditContent {
+  background-color: rgb(107, 116, 185);
 }
 
 #styleTitle{
@@ -19,3 +63,130 @@
   color: black;
 }
 
+#carrito{
+  display: none;
+}
+
+/* #buscador {
+    width: 80%;
+} */
+
+#botonHamburguesaHomero{
+  width: 2rem;
+}
+
+#bienvenidoUsuario {
+  margin-right: 190px;
+}
+
+#cerrarSesion{
+  width: 3rem;
+}
+
+/* #contendorBuscador {
+  margin-top: 100px;
+} */
+
+/* #buscador {
+  margin: auto;
+} */
+
+.contenedorAside {
+  padding: 2rem;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  padding-right: 0;
+  padding-top: 50px;
+}
+
+.asideBotones {
+  background-color: transparent;
+  border: 0;
+  padding: 0.5rem;
+  cursor: pointer;
+  color: black;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  width: 100%;
+}
+.active{
+  background-color: rgb(203, 208, 249);
+  width: 100%;
+}
+
+.card {
+  border: 1px solid rgb(66, 80, 190);
+}
+.card-body{
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  background-color: rgb(66, 80, 190);
+  border-top-right-radius: 5%;
+  border-top-left-radius: 5%;
+  color: white;
+}
+
+.filto {
+  display: none;
+}
+
+@media (max-width: 575px) {
+  .contenedorAside {
+      position: absolute;
+      visibility: hidden;
+  }
+
+  .textoTitulo{
+      text-align: center;
+      margin-bottom: 1rem;
+  }
+
+  /* .contenedorDiv{
+      position: absolute;
+  } */
+
+  .asideBotones {
+      width: 80%;
+      border-top-right-radius: 1rem;
+      border-bottom-right-radius: 1rem;
+  }
+  ul {
+      padding-left: 0;
+  }
+  .contenedorUl {
+      margin-right: 30px;
+      visibility: hidden;
+  }
+
+  .divCategoria{
+      margin-top: 0;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .homero {
+      display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .ocultos {
+      visibility: hidden;
+      position: absolute;
+      
+  }
+  
+}
+
+@media (min-width: 991px) {
+  .textoCategoriaNav {
+      visibility: hidden;
+  }
+  .registroNav {
+      visibility: hidden;
+      position: absolute;
+  }
+}

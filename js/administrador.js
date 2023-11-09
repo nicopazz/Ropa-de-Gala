@@ -1,5 +1,4 @@
 
-
 const arrNuevosProductos = JSON.parse(localStorage.getItem("Productos")) || [];
 
 const datosIngresados = (e) => {
@@ -31,10 +30,12 @@ const datosIngresados = (e) => {
 }
 const button = document.getElementById("formData").addEventListener("submit",datosIngresados);
 
+/*
 const check = (e) => {
   e.preventDefault();
   console.log(e);
 }
+*/
 
 function borrar(e){
   let indexArray;
@@ -47,12 +48,44 @@ function borrar(e){
   localStorage.setItem('Productos',JSON.stringify(arrNuevosProductos));
   location.reload();
 }
+/*
+function indexEdit(id){
+  const titulo = document.getElementById("productoEdit").value;
+  //const categoria = document.getElementById("categoriaEdit").value;
+  //const precio = document.getElementById("precioEdit").value;
+  //const stock = document.getElementById("stockEdit").value;
+  //const imagen = document.getElementById("imagenEdit").value;
 
-function editar (id) {
- 
-  console.log(id);
+  arrNuevosProductos.forEach(producto => {
+    titulo.value = producto.titulo;
+  });
+  //categoria.value = arrNuevosProductos[id]
+ // precio.value = arrNuevosProductos[id]
+  //stock.value = arrNuevosProductos[id]
+  //imagen.value = arrNuevosProductos[id]
+
+  
 }
 
+function editar (id) {
+    //e.preventDefault();
+
+    const titulo = document.getElementById("productoEdit").value;
+    const categoria = document.getElementById("categoriaEdit").value;
+    const precio = document.getElementById("precioEdit").value;
+    const stock = document.getElementById("stockEdit").value;
+    const imagen = document.getElementById("imagenEdit").value;
+
+    titulo.value = arrNuevosProductos[id]
+    categoria.value = arrNuevosProductos[id]
+    precio.value = arrNuevosProductos[id]
+    stock.value = arrNuevosProductos[id]
+    imagen.value = arrNuevosProductos[id]
+
+    console.log(id);
+
+}
+*/
 
 
 arrNuevosProductos.forEach(producto => {
@@ -68,57 +101,12 @@ arrNuevosProductos.forEach(producto => {
       <td class="text-center">${producto.categoria} </td>
       <td class="text-center">${producto.precio} </td>
       <td class="text-center">${producto.stock} </td>
-      <td><img src = "${producto.imagen}" style= "width:5rem"></td>
+      <td><img src = "${producto.imagen}" style= "width:5rem" class="card" ></td>
       <td class="text-center"><input ${inputCheck} class="inputCheck" type="checkbox" id="check" ></td>
       <td class="text-center" > 
-        <button type="button" class="btn btn-info" onclick="editar(${producto.id})" data-bs-toggle="modal" data-bs-target="#exampleModal" >Editar</button>
+        <button type="button" class="btn btn-info"  data-bs-toggle="modal" data-bs-target="#modalEdit" onclick="indexEdit(${producto.id})" >Editar</button>
         
-        <!-- Modal -->
-
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Producto</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-      <form id="formData">
-      <div class="mb-3">
-        <label for="nuevoProducto" class="form-label">Producto</label>
-        <input type="text" class="form-control" id="nuevoProducto">
-      </div>
-      <div class="mb-3">
-        <label for="categoria" class="form-label">Categoria</label>
-        <select class="form-select" aria-label="Default select example" id="categoria" >
-          <option value="" disabled selected >Seleccione una opcion</option>
-          <option value="Sacos">Sacos</option>
-          <option value="Pantalones">Pantalones</option>
-          <option value="Camisas">Camisas</option>
-        </select>
-      </div>
-      <div class="mb-3">
-        <label for="precio" class="form-label">Precio</label>
-        <input type="text" class="form-control" id="precio">
-      </div>
-      <div class="mb-3">
-        <label for="stock" class="form-label">Stock</label>
-        <input type="text" class="form-control" id="stock">
-      </div>
-      <div class="mb-3">
-        <label for="imagen" class="form-label">Imagen</label>
-        <input type="url" class="form-control" id="imagen">
-      </div>
-  </form>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary">Guardar</button>
-      </div>
-    </div>
-  </div>
-</div>
-
-        <button type="button" class="btn btn-danger" onclick="borrar(${producto.id})" >Borrar</button>
+        <button type="button" class="btn btn-danger" onclick="indexEdit(${producto.id})" >Borrar</button>
       </td>
       `
       

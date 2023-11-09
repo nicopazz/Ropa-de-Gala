@@ -1,3 +1,5 @@
+
+const productosLocalS = JSON.parse(localStorage.getItem('Productos')) || [];
 const header = document.querySelector('header');
 
 
@@ -23,20 +25,22 @@ const navbar = () => {
                         </ol>
                             <p class="textoCategoriaNav text-white text-center"> Categorías </p>
 
-                        <ol class=" ocultos text-white asideBotones">
-                            <button class="fw-bold asideBotones text-white" id="todos"><i class="bi bi-arrow-right-circle-fill me-1"></i>Todos los productos</button>
+                        <ol class=" ocultos text-white botonesCanvasOl">
+                            <button class="fw-bold botonesCanvas text-white" id="todos"><i class="bi bi-arrow-right-circle-fill me-1"></i>Todos los productos</button>
                         </ol>
 
-                        <ol class=" ocultos text-white asideBotones">
-                            <button id="sacos" class="fw-bold asideBotones animate__animated animate__backInDown text-white"><i class="bi bi-arrow-right-circle-fill me-1"></i>Sacos</button>
+                        <ol class=" ocultos text-white botonesCanvasOl">
+                            <button id="sacos" class="fw-bold botonesCanvas animate__animated animate__backInDown text-white"><i class="bi bi-arrow-right-circle-fill me-1"></i>Sacos</button>
                         </ol>
 
-                        <ol class=" ocultos text-white asideBotones">
-                            <button id="pantalones" class="fw-bold asideBotones animate__animated animate__backInDown text-white"><i class="bi bi-arrow-right-circle-fill me-1"></i>Pantalones</button>
+                        <ol class=" ocultos text-white botonesCanvasOl">
+                            <button id="pantalones" class="fw-bold botonesCanvas animate__animated animate__backInDown text-white"><i class="bi bi-arrow-right-circle-fill me-1"></i>Pantalones</button>
                         </ol>
 
-                        <ol class=" ocultos text-white asideBotones">
-                        <button id="camisas" class="fw-bold asideBotones animate__animated animate__backInDown text-white"><i class="bi bi-arrow-right-circle-fill me-1"></i>Camisas</button>
+                        <ol class=" ocultos text-white botonesCanvasOl">
+                            <a href="./index.html">
+                                <button id="camisas" class="fw-bold botonesCanvas animate__animated animate__backInDown text-white"><i class="bi bi-arrow-right-circle-fill me-1"></i>Camisas</button>
+                            </a>
                         </ol>
                             <hr style="color: white;">
                         <li class="nav-item p-3 py-md-1 d-flex justify-content-around">
@@ -49,14 +53,14 @@ const navbar = () => {
                                     
                                     ` 
                                     : `
-                                    <a href="./paginas/login.html">
+                                    <a href="../paginas/login.html">
                                     <button 
                                     type="button" 
                                     class="btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown"><i class="bi bi-person-fill me-3" ></i>
                                     Ingresar
                                     </button>
                                     </a>
-                                    <a href="./paginas/signup.html">
+                                    <a href="../paginas/signup.html">
                                     <button 
                                     type="button" 
                                     class="registroNav btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown">
@@ -73,6 +77,16 @@ const navbar = () => {
                                     `
                                     : ""
                                 }
+                                ${user ?  
+                                      `
+                                    <a href="../paginas/administrador.html"><button id="admin" class="btn btn-outline-light fw-bold ms-2 ">
+                                    <i class="bi bi-gear"></i>
+                                    </button></a>
+                                    `
+                                    : ""
+                                }
+                            
+
                         </li>
                             <hr class=" ocultos " style="color: white;">
                         <li class="nav-item p-3 py-md-1">
@@ -81,6 +95,14 @@ const navbar = () => {
                                 Carrito
                             </button>
                             </a>
+                        </li>
+
+                        <li class="nav-item p-3 py-md-1">
+                        <a href="../index.html">
+                        <button id="inicio" class="btn btn-warning animate__animated animate__backInDown"><i class="bi bi-house"></i>
+                            Inicio
+                        </button>
+                        </a>
                         </li>
 
                         <li class="nav-item p-3 py-md-1 ml-5" id="search-login">
@@ -96,8 +118,43 @@ const navbar = () => {
     `)
     
 }
+navbar();
 
-export default navbar;
+
+/*
+//tratndo de hacer que funcionen los botones laterales del canvas
+function botonesLaterales (){
+     const botonesCanvas = document.querySelectorAll('.botonesCanvas');
+    console.log(botonesCanvas);
+     botonesCanvas.forEach(boton => {
+       boton.addEventListener('click', (e) => {
+            if (e.currentTarget.id !== 'todos') {
+                const productoBotonCategoria = productosLocalS.filter(producto => producto.categoria === e.currentTarget.id);
+                insertarCategoria(productoBotonCategoria);
+            } else {
+                 insertarCategoria(productosLocalS);
+             }
+         })
+    })
+
+ }
+botonesLaterales();
+*/
+
+//FUNCION PARA CERRAR SESION
+document.addEventListener('DOMContentLoaded', function (){
+    const botonCerrarSesion = document.getElementById('cerrarSesion');
+    
+    botonCerrarSesion.addEventListener("click", function () {
+        localStorage.removeItem("userLogged");
+        alert('Sesión cerrada');
+        window.location.reload();
+    });
+    
+})
+
+
+
 
 
 
