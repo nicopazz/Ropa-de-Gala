@@ -27,7 +27,7 @@ const insertarCategoria = (productosElegidos) => {
                 <h5 class="card-title">${producto.titulo}</h5>
                 <p class="card-text">$${producto.precio}</p>
                 <button class="productoAgregar btn btn-success" id="${producto.titulo}">Agregar</button>
-                <button class="btn btn-success"id="${producto.titulo}"><a href="./paginas/detalle.html?id=${producto.id}">Detalles</a></button>
+                <button class="btn mt-2 btn-success"id="${producto.titulo}"><a href="./paginas/detalle.html?id=${producto.id}">Detalles</a></button>
             </div>
 `;     
     contenedorCards.appendChild(div);
