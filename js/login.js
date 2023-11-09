@@ -5,31 +5,14 @@ const preUsers = [
         password: "test1234",
         admin: true,
     },
-    {
-        username: "Gaston",
-        email: "gaston@gmail.com",
-        password: "test1234",
-        admin: true
-    },
+  
     {
         username: "Paula",
         email: "paula@gmail.com",
         password: "test1234",
         admin: false
     },
-    {
-        username: "Gina",
-        email: "gina@gmail.com",
-        password: "test1234",
-        admin: false
-    },
-    {
-        username: "Shadow",
-        email: "shadow@garden.com",
-        password: "alpha1234",
-        admin: false,
-        eminence: true
-    },
+   
 ];
 
 document.addEventListener("DOMContentLoaded", function () {
