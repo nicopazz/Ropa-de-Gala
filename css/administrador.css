@@ -34,6 +34,13 @@ a {
   --bs-table-border-color: rgb(66, 80, 190);
 }
 
+#h1Style{
+  color: white;
+  margin-bottom: -20px;
+  margin-left: 50px;
+  
+  
+}
 
 .card{
   display: flex;

@@ -4,6 +4,7 @@
 
 body {
     background-color: rgb(66, 80, 190);
+
 }
 
 footer{
@@ -16,8 +17,19 @@ a {
     color: white;
 }
 
+#h1Style{
+    color: white;
+    margin-bottom: -20px;
+    margin-left: 50px;
+    
+    
+}
+
+
+
 #nav {
     background-color: rgb(68, 74, 112);
+
 }
 
 #seccionCategorias {

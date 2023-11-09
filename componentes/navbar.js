@@ -20,6 +20,9 @@ const navbar = () => {
                     <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="offcanvas">
                     </button>
                 </div>
+
+                <h1 id="h1Style" >ROLLING SHOP</h1>
+
                 <div class="offcanvas-body d-flex flex-column px-0">
                     <ul class="navbar-nav fs-5 justify-content-end">
                         <ol class="nav-item p-3 py-md-1">
