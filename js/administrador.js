@@ -6,7 +6,6 @@
 // document.addEventListener('DOMContentLoaded', footer);
 
 
-
 const arrNuevosProductos = JSON.parse(localStorage.getItem("Productos")) || [];
 
 const datosIngresados = (e) => {
