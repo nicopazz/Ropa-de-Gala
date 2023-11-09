@@ -1,4 +1,5 @@
 
+
 const productosLocalS = JSON.parse(localStorage.getItem('Productos')) || [];
 const contenedorCards = document.querySelector('.contenedorCards');
 const botonesCategoria = document.querySelectorAll('.asideBotones');

@@ -3,9 +3,11 @@ const productosLocalS = JSON.parse(localStorage.getItem('Productos')) || [];
 const header = document.querySelector('header');
 
 
+
 const navbar = () => {
     const user = JSON.parse(localStorage.getItem('userLogged'))|| undefined;
     // console.log(user[0].username);
+    
     return (header.innerHTML = `
     <nav class="navbar navbar-expand-lg py-3 fixed-top border border-secondary navbar-dark" id="nav">
         <div class="container-fluid justify-content-end">
@@ -54,6 +56,7 @@ const navbar = () => {
                                     ` 
                                     : `
                                     <a href="../paginas/login.html">
+
                                     <button 
                                     type="button" 
                                     class="btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown"><i class="bi bi-person-fill me-3" ></i>
@@ -65,6 +68,7 @@ const navbar = () => {
                                     type="button" 
                                     class="registroNav btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown">
                                     Registrate
+
                                     </button>
                                     </a>
                                     `
@@ -153,6 +157,36 @@ document.addEventListener('DOMContentLoaded', function (){
     
 })
 
+
+//tratndo de hacer que funcionen los botones laterales del canvas
+// function botonesLaterales (){
+//     const botonesCanvas = document.querySelectorAll('.botonesCanvas');
+
+//     botonesCanvas.forEach(boton => {
+//         boton.addEventListener('click', (e) => {
+//             if (e.currentTarget.id !== 'todos') {
+//                 const productoBotonCategoria = productosLocalS.filter(producto => producto.categoria === e.currentTarget.id);
+//                 insertarCategoria(productoBotonCategoria);
+//             } else {
+//                 insertarCategoria(productosLocalS);
+//             }
+//         })
+//     })
+
+// }
+
+navbar();
+
+//FUNCION PARA CERRAR SESION
+document.addEventListener('DOMContentLoaded', function (){
+    const botonCerrarSesion = document.getElementById('cerrarSesion');
+
+    botonCerrarSesion.addEventListener("click", function () {
+        localStorage.removeItem("userLogged");
+        alert('Sesión cerrada');
+        window.location.reload();
+    });
+})
 
 
 
