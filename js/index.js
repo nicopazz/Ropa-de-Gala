@@ -1,12 +1,4 @@
 
-import navbar from '../componentes/navbar.js';
-import footer from '../componentes/footer.js';
-
-
-document.addEventListener('DOMContentLoaded', navbar);
-document.addEventListener('DOMContentLoaded', footer);
-
-
 const productosLocalS = JSON.parse(localStorage.getItem('Productos')) || [];
 const contenedorCards = document.querySelector('.contenedorCards');
 const botonesCategoria = document.querySelectorAll('.asideBotones');
@@ -95,12 +87,14 @@ function agregarAlCarrito (e) {
 } 
 
 
+
 //FUNCION PARA EL BUSCADOR DE PRODUCTOS....
 const btnBuscador = document.getElementById('botonBuscador');
 btnBuscador.addEventListener('click', buscar)
 
 function buscar (e){
     e.preventDefault()
+
 
     let buscador = document.getElementById('inputBuscador').value.toLowerCase();
 
@@ -109,7 +103,6 @@ function buscar (e){
         let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador); 
 
         insertarCategoria(buscadorCategorias);
-
     } else {
         insertarCategoria(productosLocalS);
     }
