@@ -1,9 +1,3 @@
-// import navbar from '../componentes/navbar.js';
-// import footer from '../componentes/footer.js';
-
-
-// document.addEventListener('DOMContentLoaded', navbar);
-// document.addEventListener('DOMContentLoaded', footer);
 
 const arrNuevosProductos = JSON.parse(localStorage.getItem("Productos")) || [];
 
@@ -54,39 +48,11 @@ function borrar(e){
   localStorage.setItem('Productos',JSON.stringify(arrNuevosProductos));
   location.reload();
 }
+
+
 /*
-function indexEdit(id){
-  const titulo = document.getElementById("productoEdit").value;
-  //const categoria = document.getElementById("categoriaEdit").value;
-  //const precio = document.getElementById("precioEdit").value;
-  //const stock = document.getElementById("stockEdit").value;
-  //const imagen = document.getElementById("imagenEdit").value;
-
-  arrNuevosProductos.forEach(producto => {
-    titulo.value = producto.titulo;
-  });
-  //categoria.value = arrNuevosProductos[id]
- // precio.value = arrNuevosProductos[id]
-  //stock.value = arrNuevosProductos[id]
-  //imagen.value = arrNuevosProductos[id]
-
-  
-}
-
 function editar (id) {
     //e.preventDefault();
-
-    const titulo = document.getElementById("productoEdit").value;
-    const categoria = document.getElementById("categoriaEdit").value;
-    const precio = document.getElementById("precioEdit").value;
-    const stock = document.getElementById("stockEdit").value;
-    const imagen = document.getElementById("imagenEdit").value;
-
-    titulo.value = arrNuevosProductos[id]
-    categoria.value = arrNuevosProductos[id]
-    precio.value = arrNuevosProductos[id]
-    stock.value = arrNuevosProductos[id]
-    imagen.value = arrNuevosProductos[id]
 
     console.log(id);
 
@@ -112,7 +78,7 @@ arrNuevosProductos.forEach(producto => {
       <td class="text-center" > 
         <button type="button" class="btn btn-info"  data-bs-toggle="modal" data-bs-target="#modalEdit" onclick="indexEdit(${producto.id})" >Editar</button>
         
-        <button type="button" class="btn btn-danger" onclick="indexEdit(${producto.id})" >Borrar</button>
+        <button type="button" class="btn btn-danger" onclick="borrar(${producto.id})" >Borrar</button>
       </td>
       `
       
