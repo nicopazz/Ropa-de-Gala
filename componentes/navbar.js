@@ -1,3 +1,5 @@
+
+const productosLocalS = JSON.parse(localStorage.getItem('Productos')) || [];
 const header = document.querySelector('header');
 
 
@@ -54,17 +56,19 @@ const navbar = () => {
                                     ` 
                                     : `
                                     <a href="../paginas/login.html">
-                                        <button 
-                                        type="button" 
-                                        class="btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown"><i class="bi bi-person-fill me-3" ></i>
-                                        Ingresar
-                                        </button>
+
+                                    <button 
+                                    type="button" 
+                                    class="btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown"><i class="bi bi-person-fill me-3" ></i>
+                                    Ingresar
+                                    </button>
                                     </a>
                                     <a href="../paginas/signup.html">
-                                        <button 
-                                        type="button" 
-                                        class="registroNav btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown">
-                                        Registrate
+                                    <button 
+                                    type="button" 
+                                    class="registroNav btn btn-outline-secondary fw-bold text-white animate__animated animate__backInDown">
+                                    Registrate
+
                                     </button>
                                     </a>
                                     `
@@ -77,6 +81,16 @@ const navbar = () => {
                                     `
                                     : ""
                                 }
+                                ${user ?  
+                                      `
+                                    <a href="../paginas/administrador.html"><button id="admin" class="btn btn-outline-light fw-bold ms-2 ">
+                                    <i class="bi bi-gear"></i>
+                                    </button></a>
+                                    `
+                                    : ""
+                                }
+                            
+
                         </li>
                             <hr class=" ocultos " style="color: white;">
                         <li class="nav-item p-3 py-md-1">
@@ -85,6 +99,14 @@ const navbar = () => {
                                 Carrito
                             </button>
                             </a>
+                        </li>
+
+                        <li class="nav-item p-3 py-md-1">
+                        <a href="../index.html">
+                        <button id="inicio" class="btn btn-warning animate__animated animate__backInDown"><i class="bi bi-house"></i>
+                            Inicio
+                        </button>
+                        </a>
                         </li>
 
                         <li class="nav-item p-3 py-md-1 ml-5" id="search-login">
@@ -100,6 +122,40 @@ const navbar = () => {
     `)
     
 }
+navbar();
+
+
+/*
+//tratndo de hacer que funcionen los botones laterales del canvas
+function botonesLaterales (){
+     const botonesCanvas = document.querySelectorAll('.botonesCanvas');
+    console.log(botonesCanvas);
+     botonesCanvas.forEach(boton => {
+       boton.addEventListener('click', (e) => {
+            if (e.currentTarget.id !== 'todos') {
+                const productoBotonCategoria = productosLocalS.filter(producto => producto.categoria === e.currentTarget.id);
+                insertarCategoria(productoBotonCategoria);
+            } else {
+                 insertarCategoria(productosLocalS);
+             }
+         })
+    })
+
+ }
+botonesLaterales();
+*/
+
+//FUNCION PARA CERRAR SESION
+document.addEventListener('DOMContentLoaded', function (){
+    const botonCerrarSesion = document.getElementById('cerrarSesion');
+    
+    botonCerrarSesion.addEventListener("click", function () {
+        localStorage.removeItem("userLogged");
+        alert('Sesión cerrada');
+        window.location.reload();
+    });
+    
+})
 
 
 //tratndo de hacer que funcionen los botones laterales del canvas
@@ -132,7 +188,7 @@ document.addEventListener('DOMContentLoaded', function (){
     });
 })
 
-// export default navbar;
+
 
 
 

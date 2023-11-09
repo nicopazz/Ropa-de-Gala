@@ -1,6 +1,5 @@
 
 
-
 const productosLocalS = JSON.parse(localStorage.getItem('Productos')) || [];
 const contenedorCards = document.querySelector('.contenedorCards');
 const botonesCategoria = document.querySelectorAll('.asideBotones');
@@ -105,8 +104,6 @@ function buscar (e){
         let buscadorCategorias = productosLocalS.filter(producto => producto.categoria === buscador); 
 
         insertarCategoria(buscadorCategorias);
-
-
     } else {
         insertarCategoria(productosLocalS);
     }

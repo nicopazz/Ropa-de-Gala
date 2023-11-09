@@ -1,13 +1,7 @@
-import navbar from "../componentes/navbar.js";
-import footer from "../componentes/footer.js";
-
-document.addEventListener('DOMContentLoaded', footer);
-document.addEventListener('DOMContentLoaded', navbar);
-
 const header = document.querySelector('header');
 const main = document.querySelector('main');
 
-    const paginaError = () => {
+const paginaError = () => {
         let div = document.createElement('div');
         div.classList.add('row')
         div.innerHTML = `
@@ -17,8 +11,8 @@ const main = document.querySelector('main');
         </div>
         `
         main.appendChild(div);
-        }
+}
 
-        paginaError();
+paginaError();
 
 

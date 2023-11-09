@@ -2,7 +2,7 @@ const contenedorFooter = document.querySelector('footer');
 
 const footer = () =>{
 
-return ( contenedorFooter.innerHTML= 
+    return ( contenedorFooter.innerHTML= 
         `
         <div class="container-footer py-3 row">
             <div class="textoTitulo col-sm-4">
@@ -37,10 +37,9 @@ return ( contenedorFooter.innerHTML=
         </div>
         `
 
-)
-
+    )
 }
 
 footer();
 
-// export default footer;
+

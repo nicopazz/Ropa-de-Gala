@@ -108,6 +108,15 @@ a {
     display: none;
 }
 
+.botonesCanvas {
+    background-color: transparent;
+    border: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+    color: black;
+    
+}
+
 @media (max-width: 575px) {
     .contenedorAside {
         position: absolute;

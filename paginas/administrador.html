@@ -6,98 +6,157 @@
   <title>Pagina de administrador</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="/css/administrador.css">
-  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  
 </head>
 <body>
   <header>
       
   </header>
 
+  
+ <main>
+      <!-- Boton modal -->
+
+
      <!-- Boton modal -->
       <div class="container mt-5 px-4">
         <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#Modal">
           +
         </button>
-       </div>
-    
-    <!-- Modal -->
-  <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+      </div>
+        
+        <!-- Modal -->
+      <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
 
-      <div class="modal-content" id="modalContent">
+          <div class="modal-content" id="modalContent">
 
-        <div class="modal-header">
-          <h1 class="modal-title fs-5" id="ModalLabel"  >Agregar nuevo producto</h1>
-          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-        </div>
-
-        <div class="modal-body">
-          <div class="container col-8">
-
-            <!-- Formulario para agregar nuevo producto -->
-            <form id="formData">
-              <div class="mb-3">
-                <label for="nuevoProducto" class="form-label">Producto</label>
-                <input type="text" class="form-control" id="nuevoProducto">
-              </div>
-              <div class="mb-3">
-                <label for="categoria" class="form-label">Categoria</label>
-                <select class="form-select" aria-label="Default select example" id="categoria" >
-                  <option value="" disabled selected >Seleccione una opcion</option>
-
-                  <option value="sacos">Sacos</option>
-                  <option value="santalones">Pantalones</option>
-                  <option value="camisas">Camisas</option>
-
-                </select>
-              </div>
-              <div class="mb-3">
-                <label for="precio" class="form-label">Precio</label>
-                <input type="text" class="form-control" id="precio">
-              </div>
-              <div class="mb-3">
-                <label for="stock" class="form-label">Stock</label>
-                <input type="text" class="form-control" id="stock">
-              </div>
-              <div class="mb-3">
-                <label for="imagen" class="form-label">Imagen</label>
-                <input type="url" class="form-control" id="imagen">
-              </div>
-
-            <div class="modal-footer">
-              <button type="submit" class="btn btn-success" >Agregar</button>
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="ModalLabel"  >Agregar nuevo producto</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          </form>
+
+            <div class="modal-body">
+              <div class="container col-8">
+
+                <!-- Formulario para agregar nuevo producto -->
+                <form id="formData">
+                  <div class="mb-3">
+                    <label for="nuevoProducto" class="form-label">Producto</label>
+                    <input type="text" class="form-control" id="nuevoProducto">
+                  </div>
+                  <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoria</label>
+                    <select class="form-select" aria-label="Default select example" id="categoria" >
+                      <option value="" disabled selected >Seleccione una opcion</option>
+
+                      <option value="sacos">Sacos</option>
+                      <option value="santalones">Pantalones</option>
+                      <option value="camisas">Camisas</option>
+
+                    </select>
+                  </div>
+                  <div class="mb-3">
+                    <label for="precio" class="form-label">Precio</label>
+                    <input type="text" class="form-control" id="precio">
+                  </div>
+                  <div class="mb-3">
+                    <label for="stock" class="form-label">Stock</label>
+                    <input type="text" class="form-control" id="stock">
+                  </div>
+                  <div class="mb-3">
+                    <label for="imagen" class="form-label">Imagen</label>
+                    <input type="url" class="form-control" id="imagen">
+                  </div>
+
+                <div class="modal-footer">
+                  <button type="submit" class="btn btn-success" >Agregar</button>
+                </div>
+              </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
+      
+      <!-- Tabla de productos -->
+      <div class="container mt-2" >
+
+          <table class="table rounded-4" id="tableStyle">
+
+              <thead>
+                <tr>
+                  <th scope="col">Productos</th>
+                  <th scope="col">Categoria</th>
+                  <th scope="col">Precio</th>
+                  <th scope="col">Stock</th>
+                  <th scope="col">Imagen</th>
+                  <th scope="col">Publicado</th>
+                  <th scope="col">Acción</th>
+                </tr>
+              </thead>
+              <tbody>
+              
+              
+              </tbody>
+          </table>
+      </div>
+
+         <!-- Modal edit-->
+
+      <div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content" id="modalEditContent" >
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Editar Producto</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+          <form id="formData">
+            <div class="mb-3">
+              <label for="productoEdit" class="form-label">Producto</label>
+              <input type="text" class="form-control" id="productoEdit">
+            </div>
+            <div class="mb-3">
+              <label for="categoriaEdit" class="form-label">Categoria</label>
+              <select class="form-select" aria-label="Default select example" id="categoriaEdit" >
+                <option value="" disabled selected >Seleccione una opcion</option>
+                <option value="saco">Sacos</option>
+                <option value="pantalones">Pantalones</option>
+                <option value="camisas">Camisas</option>
+              </select>
+            </div>
+            <div class="mb-3">
+              <label for="precioEdit" class="form-label">Precio</label>
+              <input type="text" class="form-control" id="precioEdit">
+            </div>
+            <div class="mb-3">
+              <label for="stockEdit" class="form-label">Stock</label>
+              <input type="text" class="form-control" id="stockEdit">
+            </div>
+            <div class="mb-3">
+              <label for="imagenEdit" class="form-label">Imagen</label>
+              <input type="url" class="form-control" id="imagenEdit">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-success" >Guardar</button>
+              </div>
+        </form>
+            </div>
+          </div>
+        </div>
+      </div>
+   </main>
+  <footer>
+
+  </footer>
+
+
   
-  <!-- Tabla de productos -->
-  <div class="container mt-2" >
-
-      <table class="table rounded-4" id="tableStyle">
-
-          <thead>
-            <tr>
-              <th scope="col">Productos</th>
-              <th scope="col">Categoria</th>
-              <th scope="col">Precio</th>
-              <th scope="col">Stock</th>
-              <th scope="col">Imagen</th>
-              <th scope="col">Publicado</th>
-              <th scope="col">Acción</th>
-            </tr>
-          </thead>
-          <tbody>
-          
-          
-          </tbody>
-      </table>
-  </div>
-
-  
+  <script src="../componentes/footer.js"></script>
+  <script src="../componentes/navbar.js"></script>
   <script src="/js/administrador.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
