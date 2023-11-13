@@ -1,4 +1,4 @@
-# Ropa-de-Gala
+# Rolling Shop
 ## Introducción
 - **Ropa de gala** es una pagina de e-comerce la cual nos muestra todos los productos que la empresa disponga para la venta, a si mismo nos permite sumar nuevos productos al stock en venta. La página está dirigida a todas aquellas empresas que deseen publicar y vender sus productos de ropa elegante a la comunidad.
 
