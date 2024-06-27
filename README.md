@@ -14,6 +14,9 @@ Para la creación del proyecto utilizamos:
 - Contamos con una pagina de inicio de sesion la cual podemos ingresar como usuarios compradores o como administradores de pagina.
 - En la pagina de administrador podemos editar, agregar y/o eliminar productos existentes en la base de datos.
 
+## Test
+- https://rollingshoptuc.netlify.app/
+
 ## Colaboración
  Quienes pueden colaborar en el proyecto?
  -El proyecto por el momento se encuentra privado y unicamente puede colaborar el equipo en desarrollo.
